@@ -76,7 +76,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 nav ul {
@@ -135,7 +135,7 @@ header h2 {
 }
 
 #apropos {
-    background-color: #252526; /* Gris foncé */
+    background-color: #1F1F1F; /* Gris foncé */
     padding: 60px 0;
 }
 
@@ -151,6 +151,7 @@ header h2 {
 
 #apropos .text {
     width: 55%;
+    text-align: justify;  /* Justifier le texte comme a dis le professeur*/
 }
 
 #apropos .text p{
@@ -301,4 +302,142 @@ footer {
     background-color: #252526; 
     padding: 20px 0;
     text-align: center;
+}
+
+/* Responsive Design  js^sks*/
+
+/* Styles pour la section compétences, cohérents avec le reste du site */
+#competences {
+    padding: 60px 20px; /* Espacement intérieur, similaire aux autres sections */
+    background-color: #252526; /* Couleur de fond gris foncé, comme #apropos et footer */
+    color: #D4D4D4; /* Couleur du texte principal */
+    text-align: center; /* Centrer le texte principal */
+}
+
+#competences .container {
+    width: 80%; /* Utiliser la même largeur de conteneur */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#competences h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em; /* Taille de h2 des autres sections */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#competences p {
+    font-weight: 300;
+    line-height: 1.6;
+    color: #999; /* Gris moyen pour le paragraphe */
+    margin-bottom: 30px;
+}
+
+#competences h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 2em; /* Légèrement plus petit que h2 principal */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.competences_div {
+    margin-bottom: 40px;
+    text-align: center; /* Centrer le contenu de chaque div */
+}
+
+.competences_div h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 1.5em; /* Taille de h3 des autres sections */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #D4D4D4; /* Couleur du texte */
+}
+
+.competences_img {
+    display: flex; /* Utiliser Flexbox pour l'alignement horizontal */
+    flex-wrap: wrap; /* Passer à la ligne si l'espace est insuffisant */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    gap: 30px; /* Espacement entre les icônes */
+}
+
+.competences_img figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.competences_img a {
+    text-decoration: none;
+    color: #D4D4D4; /* Couleur du texte */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.competences_img img {
+    height: 100px; /* Garder la hauteur spécifiée */
+    max-width: 100%; /* Rendre les images responsives si nécessaire */
+    margin-bottom: 5px;
+    filter: grayscale(80%); /* Optionnel: atténuer les couleurs pour un style plus technique */
+    transition: filter 0.3s ease;
+}
+
+.competences_img img:hover {
+    filter: grayscale(0%); /* Optionnel: rétablir la couleur au survol */
+}
+
+.competences_img figcaption {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #999; /* Gris moyen pour la légende */
+}
+
+/* Responsive pour les écrans plus petits */
+@media (max-width: 768px) {
+    #competences h1 {
+        font-size: 2em;
+    }
+
+    #competences h2 {
+        font-size: 1.8em;
+    }
+
+    .competences_img {
+        gap: 20px;
+    }
+
+    .competences_img img {
+        height: 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Section expériences */
+#experiences {
+    padding: 60px 20px; /* Espacement intérieur, similaire aux autres sections */
+    background-color: #252526; /* Couleur de fond gris foncé, comme #apropos et footer */
+    color: #D4D4D4; /* Couleur du texte principal */
+    text-align: center; /* Centrer le texte principal */
+}
+
+#experiences h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
 }

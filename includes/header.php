@@ -11,8 +11,10 @@
         <div class="container">
             <ul>
                 <li><a href="#accueil" class="active">Accueil</a></li>
-                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
+                <li><a href="#experience">Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -22,7 +24,7 @@
             <h1><?php echo $owner_name; ?></h1>
             <h2><?php echo $owner_description; ?></h2>
             <video autoplay loop muted playsinline>
-              <source src="images/videoi.mp4" type="video/mp4">
+              <source src="public/images/videoi.mp4" type="video/mp4">
               Votre navigateur ne supporte pas la lecture de vidéos HTML5.
             </video>
             <a href="#projets" class="btn">Voir mes projets</a>

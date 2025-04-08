@@ -8,16 +8,9 @@
                     Curieux et rigoureux, je suis particulièrement attiré par le développement front-end et le design d’interfaces interactives, où je peux m’exprimer à travers des solutions innovantes et user-friendly.
                     Travailler en équipe est une vraie source d’énergie pour moi : j’aime partager mes idées, apporter mon soutien et contribuer à une dynamique positive en mettant en œuvre de bonnes méthodes d'organisation et de collaboration.
                 </p>
-
-                <h3>Compétences</h3>
-                <ul>
-                  <?php foreach ($skills as $skill): ?>
-                    <li><?php echo $skill; ?></li>
-                  <?php endforeach; ?>
-                </ul>
             </div>
             <div class="cv">
-                <img src="images/CV_2024-12-21_Mohamed_Kosbar_page-0001.jpg" alt="Votre CV" class="cv-preview" onclick="openCvModal()">
+                <img src="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.jpg" alt="Votre CV" class="cv-preview" onclick="openCvModal()">
                 <p class="download-link"><a href="path/to/your/cv.pdf" target="_blank">Télécharger mon CV (PDF)</a></p>
             </div>
         </div>
