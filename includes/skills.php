@@ -1,6 +1,6 @@
 <section id="competences" class="py-5 bg-light">
     <div class="container">
-    <h2>Mes compétences</h2>
+    <h2  class="section-title">Mes compétences</h2>
     
     <div class="competences_div">
         <h3>Front-end</h3>

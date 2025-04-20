@@ -1,3 +1,4 @@
+/* Styles globaux */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -26,7 +27,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Taille unifiée pour les titres de section */
 }
 
 h3 {
@@ -68,40 +69,81 @@ a:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.btn-close {
+    filter: invert(1); /* blanc si fond sombre */
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  
+  .btn-close:hover {
+    opacity: 1;
+  }
+  
+
 /* Navigation */
 nav {
-    background-color: rgba(30, 30, 30, 0.8); /* Gris foncé avec transparence */
-    backdrop-filter: blur(10px);
+    background-color: transparent; /* Rendre l'arrière-plan transparent */
     padding: 15px 0;
-    position: fixed;
-    width: 100%;
+    position: fixed; /* Fixe la navigation en haut de la fenêtre */
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure qu'elle est au-dessus du contenu */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le background et l'ombre */
+}
+
+/* Optionnel: Style de la navigation au défilement (ajout d'un fond sombre et d'une ombre) */
+nav.scrolled {
+    background-color: rgba(30, 30, 30, 0.9); /* Fond sombre légèrement transparent */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre au défilement */
+}
+
+nav .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav li {
-    margin: 0 15px;
+nav ul li {
+    position: relative;
 }
 
-nav a {
-    color: #D4D4D4;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a.active, nav a:hover {
-    background-color: #007ACC; /* Bleu des liens actifs et survolés */
+nav ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
     color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+    transform: translateY(-3px);
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #FFD700;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        padding: 12px 20px;
+    }
 }
 
 header {
@@ -123,6 +165,7 @@ header video {
     height: auto;
     z-index: -1;
     transform: translateX(-50%) translateY(-50%);
+    object-fit: cover; Cette propriété permet de s'assurer que la vidéo couvre toute la zone sans déformation
 }
 
 header h1 {
@@ -134,89 +177,145 @@ header h2 {
     text-shadow: 2px 2px 3px #000;
 }
 
-#apropos {
-    background-color: #1F1F1F; /* Gris foncé */
-    padding: 60px 0;
-}
-
-#apropos .content {
-    display: flex;
-    justify-content: space-between;
-}
-
-#apropos h2 {
+/* Style unifié pour les titres de section (h2) et leur décoration */
+section h2 {
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 2.5em; /* Taille unifiée */
+    color: #ffffff;
+    margin-bottom: 40px; /* Espacement sous le titre */
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px; /* Taille unifiée du trait */
+    height: 4px;
+    background-color: #007ACC; /* Couleur unifiée du trait */
+    margin: 12px auto 0; /* Positionnement centré */
+    border-radius: 2px;
+}
+
+/* === SECTION À PROPOS === */
+#apropos {
+    padding: 80px 40px;
+    background-color: #121212;
+    color: #eee;
+}
+
+#apropos .apropos-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #apropos .text {
-    width: 55%;
-    text-align: justify;  /* Justifier le texte comme a dis le professeur*/
-}
-
-#apropos .text p{
-    color: #999; /* Gris moyen */
+    flex: 1 1 55%;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ccc;
 }
 
 #apropos .cv {
-    width: 40%;
+    flex: 1 1 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: 2px solid #007ACC; /* Bordure bleue */
-    border-radius: 10px;
-    padding: 20px;
+    background-color: #1E1E1E;
+    border: 1px solid #3A3A3A;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#apropos .cv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
 #apropos .cv-preview {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    border-radius: 12px;
     cursor: pointer;
-    border: 1px solid #007ACC; /* Bordure bleue */
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-preview {
+    width: 100%;   /* Ajuste selon la taille de l'image */
+    max-width: 600px;
+    height: auto;
+    cursor: pointer;
 }
 
 #apropos .cv-preview:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-#apropos .download-link {
-    text-align: center;
+#apropos .download {
+    display: inline-block;
+    background-color: #007ACC;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
+#apropos .download:hover {
+    background-color: #005fa3;
+}
+
+/* === MODAL CV === */
+/* Style du modal */
 .modal {
-    display: none;
+    display: none; /* caché par défaut */
     position: fixed;
     z-index: 1000;
+    padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #D4D4D4;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    z-index: 1001;
-}
-
-.modal-content {
+    background-color: rgba(0,0,0,0.8); /* fond sombre */
+  }
+  
+  /* L'image dans le modal */
+  .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-    .close:hover,
+    max-width: 90%;
+    width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+  
+  /* Bouton pour fermer */
+  .close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+.close:hover,
 .close:focus {
     color: #999; /* ou #bbb selon votre version du CSS */
     text-decoration: none;
@@ -227,9 +326,7 @@ header h2 {
     padding: 60px 0;
 }
 
-#projets h2 {
-    text-align: center;
-    margin-bottom: 40px;
+#projets h2 { /* Utilise le style global pour les titres de section */
 }
 
 .projets-grid {
@@ -267,44 +364,27 @@ header h2 {
     color: #999; /* Gris moyen */
 }
 
-.projet-details {
-    padding: 20px;
-    display: none;
-    background-color: #1E1E1E; /* Arrière-plan principal */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-}
 
-.projet-details h4{
-    margin-bottom: 10px;
-}
-
-.projet-details p{
+.projet-details p {
     color: #999; /* Gris moyen */
     margin-bottom: 15px;
 }
 
-.projet-details ul{
+.projet-details ul {
     margin-bottom: 15px;
     padding-left: 20px;
 }
 
-.projet-details ul li{
+.projet-details ul li {
     color: #999;
     margin-bottom: 5px;
 }
 
 footer {
-    background-color: #252526; 
+    background-color: #252526;
     padding: 20px 0;
     text-align: center;
 }
-
-/* Responsive Design  js^sks*/
 
 /* Styles pour la section compétences, cohérents avec le reste du site */
 #competences {
@@ -336,14 +416,7 @@ footer {
     margin-bottom: 30px;
 }
 
-#competences h2 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
-    font-size: 2em; /* Légèrement plus petit que h2 principal */
-    margin-top: 30px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+#competences h2 { /* Utilise le style global pour les titres de section */
 }
 
 .competences_div {
@@ -384,21 +457,30 @@ footer {
 }
 
 .competences_img img {
-    height: 100px; /* Garder la hauteur spécifiée */
-    max-width: 100%; /* Rendre les images responsives si nécessaire */
+    height: 100px;
+    max-width: 100%;
     margin-bottom: 5px;
-    filter: grayscale(80%); /* Optionnel: atténuer les couleurs pour un style plus technique */
-    transition: filter 0.3s ease;
+    /* Supprimer le filtre grayscale */
+    transition: transform 0.3s ease;
 }
 
 .competences_img img:hover {
-    filter: grayscale(0%); /* Optionnel: rétablir la couleur au survol */
+    transform: scale(1.05); /* Un petit effet de zoom à la place ? */
 }
 
 .competences_img figcaption {
-    font-size: 0.9em;
-    font-weight: 300;
-    color: #999; /* Gris moyen pour la légende */
+    font-size: 1em;
+    font-weight: 400;
+    color: #CCCCCC; /* Un gris plus clair pour la lisibilité */
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.competences_img figure:hover figcaption {
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 /* Responsive pour les écrans plus petits */
@@ -420,24 +502,184 @@ footer {
     }
 }
 
-
-
-
-
-
-
-
-
 /* Section expériences */
-#experiences {
-    padding: 60px 20px; /* Espacement intérieur, similaire aux autres sections */
-    background-color: #252526; /* Couleur de fond gris foncé, comme #apropos et footer */
-    color: #D4D4D4; /* Couleur du texte principal */
-    text-align: center; /* Centrer le texte principal */
+#experience {
+    padding: 60px 20px;
+    background-color: #252526; /* Fond sombre */
+    color: #D4D4D4; /* Texte gris clair*/
+    text-align: center;
 }
 
-#experiences h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #333;
+.experience-timeline {
+    position: relative;
+    padding: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #007ACC;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #1E1E1E;
+    border: 4px solid #007ACC;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.right-container::after {
+    left: -17px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: #1E1E1E;
+    position: relative;
+    border-radius: 6px;
+}
+
+.content h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.content p {
+    font-size: 1em;
+    color: #999;
+    line-height: 1.5;
+}
+
+.content .date {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 10px;
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .experience-timeline::before {
+        left: 5%;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 20px;
+    }
+
+    .timeline-container::after {
+        left: 18px;
+    }
+
+    .left-container::after,
+    .right-container::after {
+        left: 18px;
+    }
+
+    .right-container {
+        left: 0%;
+    }
+}
+
+/* Section contact */
+#contact {
+    padding: 80px 20px;
+    background-color: #121212;
+    color: #D4D4D4;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: left;
+    padding: 20px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #eee;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #252526;
+    color: #eee;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group .btn {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Pied de page */
+footer {
+    background-color: #252526;
+    padding: 30px 0;
+    text-align: center;
+    color: #999;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #4E94CE;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
