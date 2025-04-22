@@ -50,12 +50,13 @@
             background-color: #0044aa;
         }
     </style>
+
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="container">
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#accueil" class="active">Accueil</a></li>
                 <li><a href="#apropos">Qui suis-je ?</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
@@ -64,6 +65,7 @@
             </ul>
         </div>
     </nav>
+
 
     <!-- Nouvelle section avec vidéo en fond -->
     <section id="accueil">
@@ -77,5 +79,17 @@
             <a href="#projets" class="btn">Voir mes projets</a>
         </div>
     </section>
+    <script>
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            // Retire la classe active de tous les liens
+            navLinks.forEach(l => l.classList.remove("active"));
+            // Ajoute la classe active seulement au lien cliqué
+            this.classList.add("active");
+        });
+    });
+</script>
 </body>
 </html>

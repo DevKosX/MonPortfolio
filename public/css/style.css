@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #D4D4D4; /* Texte principal */
-    background-color: #1E1E1E; /* Arrière-plan principal */
+    background-color: #121212; /* Arrière-plan principal */
     scroll-behavior: smooth;
 }
 
@@ -79,24 +79,23 @@ a:hover {
     opacity: 1;
   }
   
-
 /* Navigation */
 nav {
-    background-color: transparent; /* Rendre l'arrière-plan transparent */
-    padding: 15px 0;
-    position: fixed; /* Fixe la navigation en haut de la fenêtre */
+    position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000; /* Assure qu'elle est au-dessus du contenu */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le background et l'ombre */
+    background-color: rgba(18, 18, 18, 0.95); /* fond semi-transparent foncé */
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Optionnel: Style de la navigation au défilement (ajout d'un fond sombre et d'une ombre) */
-nav.scrolled {
-    background-color: rgba(30, 30, 30, 0.9); /* Fond sombre légèrement transparent */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre au défilement */
+/* ===== Effet au scroll ===== */
+#navbar.scrolled {
+    background-color: rgba(18, 18, 18, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 nav .container {
     width: 90%;
@@ -115,24 +114,32 @@ nav ul {
 nav ul li {
     position: relative;
 }
-
 nav ul li a {
-    font-size: 1.2rem;
-    font-weight: 500;
     color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: color 0.3s ease, transform 0.3s ease;
+    background: transparent;
+    padding: 15px 20px; /* Ajout de padding pour un meilleur confort de clic */
+    display: block; /* Pour que le padding remplisse bien l'espace du li */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition douce pour la couleur et la position */
 }
 
 nav ul li a:hover {
-    color: #FFD700;
-    transform: translateY(-3px);
+    color: #007ACC; /* Conserve la couleur bleue au survol */
+    background: transparent; /* S'assure qu'il n'y a pas de fond coloré */
+    text-decoration: none; /* Supprime le soulignement */
+    transform: translateY(-2px); /* Léger décalage vers le haut pour un effet subtil */
 }
 
 nav ul li a.active {
-    border-bottom: 2px solid #FFD700;
+    color: #007ACC !important;
+    border-bottom: 2px solid #007ACC;
+    background: transparent;
+}
+
+/* Neutraliser les effets natifs de focus */
+nav ul li a:focus,
+nav ul li a:active {
+    outline: none;
+    background-color:#007ACC;
 }
 
 @media (max-width: 768px) {
@@ -165,7 +172,7 @@ header video {
     height: auto;
     z-index: -1;
     transform: translateX(-50%) translateY(-50%);
-    object-fit: cover; Cette propriété permet de s'assurer que la vidéo couvre toute la zone sans déformation
+    object-fit: cover; /* Pour couvrir tout l'espace */
 }
 
 header h1 {
@@ -326,9 +333,6 @@ section h2::after {
     padding: 60px 0;
 }
 
-#projets h2 { /* Utilise le style global pour les titres de section */
-}
-
 .projets-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -336,7 +340,7 @@ section h2::after {
 }
 
 .projet {
-    background-color: #252526; /* Gris foncé */
+    background-color: #1E1E1E; /* Gris foncé */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -389,7 +393,7 @@ footer {
 /* Styles pour la section compétences, cohérents avec le reste du site */
 #competences {
     padding: 60px 20px; /* Espacement intérieur, similaire aux autres sections */
-    background-color: #252526; /* Couleur de fond gris foncé, comme #apropos et footer */
+    background-color: #1E1E1E; /* Couleur de fond gris foncé, comme #apropos et footer */
     color: #D4D4D4; /* Couleur du texte principal */
     text-align: center; /* Centrer le texte principal */
 }
@@ -416,8 +420,6 @@ footer {
     margin-bottom: 30px;
 }
 
-#competences h2 { /* Utilise le style global pour les titres de section */
-}
 
 .competences_div {
     margin-bottom: 40px;
@@ -663,6 +665,21 @@ footer {
     margin-right: 0;
 }
 
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF; /* ou une autre couleur de ton thème */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
 /* Pied de page */
 footer {
     background-color: #252526;
@@ -683,3 +700,8 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+/* Animation de défilement */

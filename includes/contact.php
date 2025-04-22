@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["message"])) {
                 <textarea class="form-control" id="message" name="message" rows="5" required><?= isset($_POST['message']) ? htmlspecialchars($_POST['message']) : ''; ?></textarea>
             </div>
 
-            <button type="submit" class="btn-submit">Envoyer le Message</button>
+            <button type="submit" class="form-control btn-submit">Envoyer le Message</button>
         </form>
     </div>
 </section>
