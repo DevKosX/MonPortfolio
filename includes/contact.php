@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["message"])) {
 
     // Envoi de l'email
     $retour = mail(
-        "kosbarmohamed.31@gmail.com", // Ton adresse
+        "mohamed-kosbar@edu.univ-paris13.fr", // Ton adresse
         $sujet,
         $contenuMessage,
         "From: contact@monsite.fr\r\n" .

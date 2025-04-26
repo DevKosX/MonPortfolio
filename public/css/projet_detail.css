@@ -1,0 +1,111 @@
+/* public/css/projet_detail.css */
+
+.detail-projet {
+    padding-top: 80px; /* Ajuster selon la hauteur de ta barre de navigation */
+    padding-bottom: 60px;
+    color: #D4D4D4; /* Couleur du texte principal */
+    background-color: #121212; /* Fond principal (comme le body) */
+}
+
+.detail-projet h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2.5em; /* Taille unifiée pour les titres de section */
+}
+
+.projet-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #1E1E1E; /* Fond des blocs de contenu (comme les sections) */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.projet-image {
+    flex: 1 1 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.projet-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.projet-description {
+    flex: 1 1 500px;
+}
+
+.projet-description h2,
+.projet-description h3 {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 1.5em; /* Taille des sous-titres */
+}
+
+.projet-description ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.projet-description li {
+    line-height: 1.6;
+    color: #999;
+    font-weight: 300;
+}
+
+/* Style du bouton "Retour aux Projets" */
+.projet-description .btn-retour-projets {
+    background-color: #007ACC; /* Bleu des boutons */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Pour que le bouton ressemble à un bouton */
+}
+
+.projet-description .btn-retour-projets:hover {
+    background-color: #005EA3; /* Bleu des boutons au survol */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive pour les écrans plus petits */
+@media (max-width: 768px) {
+    .projet-details-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .projet-image {
+        width: 100%;
+    }
+
+    .projet-description {
+        padding-top: 20px;
+    }
+}

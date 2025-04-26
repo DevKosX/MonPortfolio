@@ -23,6 +23,12 @@
                     <figcaption>JavaScript</figcaption>
                 </a>
             </figure>
+            <figure>
+                <a>
+                    <img src="public/images/skills/bootstrap.png" alt="Logo BootStrap" height="100px">
+                    <figcaption>Bootstrap</figcaption>
+                </a>
+            </figure>
         </div>
     </div>
 
@@ -31,14 +37,55 @@
         <div class="competences_img">
             <figure>
                 <a>
+                    <img src="public/images/skills/php.png" alt="Logo PHP" height="100px">
+                    <figcaption>PHP</figcaption>
+                </a>
+            </figure>
+            <figure>
+                <a>
+                    <img src="public/images/skills/java.avif" alt="Logo Java" height="110px">
+                    <figcaption>Java</figcaption>
+                </a>
+            </figure>
+            <figure>
+                <a>
                     <img src="public/images/skills/python.png" alt="Logo Python" height="100px">
                     <figcaption>Python</figcaption>
                 </a>
             </figure>
             <figure>
                 <a>
-                    <img src="public/images/skills/php.png" alt="Logo PHP" height="100px">
-                    <figcaption>PHP</figcaption>
+                    <img src="public/images/skills/postgresql.png" alt="Logo SQL" height="100px">
+                    <figcaption>PostgreSQL</figcaption>
+                </a>
+            </figure>
+        </div>
+    </div>
+    <div class="competences_div">
+        <h3>Outils transverses</h3>
+        <div class="competences_img">
+            <figure>
+                <a>
+                    <img src="public/images/skills/terminal.png" alt="Logo Laravel" height="100px">
+                    <figcaption>Terminal</figcaption>
+                </a>
+            </figure>
+            <figure>
+                <a>
+                    <img src="public/images/skills/laravel.png" alt="Logo Laravel" height="100px">
+                    <figcaption>Laravel</figcaption>
+                </a>
+            </figure>
+            <figure>
+                <a>
+                    <img src="public/images/skills/nginx.png" alt="Logo Nginx" height="110px">
+                    <figcaption>Nginx</figcaption>
+                </a>
+            </figure>
+            <figure>
+                <a>
+                    <img src="public/images/skills/xampp.png" alt="Logo XAMPP" height="100px">
+                    <figcaption>XAMPP</figcaption>
                 </a>
             </figure>
         </div>

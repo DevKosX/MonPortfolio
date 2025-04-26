@@ -286,6 +286,8 @@ section h2::after {
 
 /* === MODAL CV === */
 /* Style du modal */
+/* === MODAL CV === */
+/* Style du modal */
 .modal {
     display: none; /* caché par défaut */
     position: fixed;
@@ -298,7 +300,7 @@ section h2::after {
     overflow: auto;
     background-color: rgba(0,0,0,0.8); /* fond sombre */
   }
-  
+
   /* L'image dans le modal */
   .modal-content {
     margin: auto;
@@ -309,7 +311,7 @@ section h2::after {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
   }
-  
+
   /* Bouton pour fermer */
   .close {
     position: absolute;
@@ -321,7 +323,7 @@ section h2::after {
     cursor: pointer;
     z-index: 1001;
   }
-  
+
 .close:hover,
 .close:focus {
     color: #999; /* ou #bbb selon votre version du CSS */

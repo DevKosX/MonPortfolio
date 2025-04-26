@@ -1,73 +1,96 @@
 <section id="projets">
-  <div class="container">
-    <h2 class="section-title text-light">Mes Projets</h2>
-    <div class="projets-grid">
-
-      <!-- Projet : Calculatrice Java -->
-      <div class="projet">
-        <img src="public/images/projet1.jpg" alt="Calculatrice en Java">
-        <div class="projet-info">
-          <h3>Calculatrice en Java</h3>
-          <p class="short-desc">Une calculatrice simple et intuitive développée en Java.</p>
-          <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalCalculatrice">
-            En savoir plus
-          </button>
-        </div>
-      </div>
-
-      <!-- Modal : Calculatrice -->
-      <div class="modal fade" id="modalCalculatrice" tabindex="-1" aria-labelledby="modalCalculatriceLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content text-dark">
-            <div class="modal-header border-0">
-              <h5 class="modal-title" id="modalCalculatriceLabel">Calculatrice en Java</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+    <div class="container">
+        <h2 class="section-title text-light">Mes Projets</h2>
+        <div class="projets-grid">
+            <div class="projet">
+            <img src="public/images/fa.png" alt="France Academy">
+            <div class="projet-info">
+                    <h3>France Academy</h3>
+                    <p class="short-desc">Plateforme de gestion des formations et utilisateurs pour un organisme fictif.</p>
+                    <a href="includes/views/projet/projet4.php" class="btn btn-outline-light" title="En savoir plus sur France Academy">
+                        En savoir plus
+                    </a>
+                </div>
             </div>
-            <div class="modal-body">
-              <p>Cette calculatrice en Java offre une interface graphique (GUI) et permet d’effectuer les opérations arithmétiques de base.</p>
-              <ul>
-                <li>Interface graphique (Swing)</li>
-                <li>+ - × ÷, gestion des parenthèses</li>
-                <li>Calculs en virgule flottante</li>
-                <li>Gestion des erreurs (division par zéro)</li>
-              </ul>
+
+            <div class="projet">
+                <img src="public/images/stagelis.png" alt="Stagelys">
+                <div class="projet-info">
+                    <h3>Stagelys</h3>
+                    <p class="short-desc">Application web de gestion des stages pour étudiants et professeurs.</p>
+                    <a href="includes/views/projet/projet5.php" class="btn btn-outline-light" title="En savoir plus sur Stagelys">
+                        En savoir plus
+                    </a>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Projet : Jeu du Fakir -->
-      <div class="projet">
-        <img src="public/images/24Info.png" alt="Jeu du Fakir">
-        <div class="projet-info">
-          <h3>Jeu du Fakir</h3>
-          <p class="short-desc">Projet développé lors des 24H de l'Info à Villetaneuse.</p>
-          <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalFakir">
-            En savoir plus
-          </button>
-        </div>
-      </div>
-
-      <!-- Modal : Jeu du Fakir -->
-      <div class="modal fade" id="modalFakir" tabindex="-1" aria-labelledby="modalFakirLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content text-dark">
-            <div class="modal-header border-0">
-              <h5 class="modal-title" id="modalFakirLabel">Jeu du Fakir</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            <div class="projet">
+                <img src="public/images/ojs.jpg" alt="Observatoire de Juvisy">
+                <div class="projet-info">
+                    <h3>Recueil de Besoin</h3>
+                    <p class="short-desc">Projet de recueil des besoins pour un observatoire astronomique local.</p>
+                    <a href="includes/views/projet/projet6.php" class="btn btn-outline-light" title="En savoir plus sur le recueil de besoin">
+                        En savoir plus
+                    </a>
+                </div>
             </div>
-            <div class="modal-body">
-              <p>Développé en équipe pendant un hackathon de 24H, le jeu du Fakir est une simulation interactive permettant d’illustrer les lois de probabilité à travers une grille de picots.</p>
+
+            <div class="projet">
+                <img src="public/images/py.png" alt="Projet Python">
+                <div class="projet-info">
+                    <h3>Santa Claus Python</h3>
+                    <p class="short-desc">Un projet en Python mêlant logique, algorithmes et interface console.</p>
+                    <a href="includes/views/projet/projet7.php" class="btn btn-outline-light" title="En savoir plus sur le projet Python">
+                        En savoir plus
+                    </a>
+                </div>
             </div>
-          </div>
+
+
+            <div class="projet">
+                <img src="public/images/projet1.jpg" alt="Calculatrice en Java">
+                <div class="projet-info">
+                    <h3>Calculatrice Objet</h3>
+                    <p class="short-desc">Une calculatrice simple et intuitive développée en Java.</p>
+                    <a href="includes/views/projet/projet1.php" class="btn btn-outline-light" title="En savoir plus sur la calculatrice en Java">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+
+            <div class="projet">
+                <img src="public/images/24Info.png" alt="Jeu du Fakir">
+                <div class="projet-info">
+                    <h3>Jeu du Fakir Objet</h3>
+                    <p class="short-desc">Projet développé lors des 24H de l'Info à Villetaneuse.</p>
+                    <a href="includes/views/projet/projet2.php" class="btn btn-outline-light" title="En savoir plus sur le Jeu du Fakir">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+
+            <div class="projet">
+                <img src="public/images/autre_projet.jpg" alt="Nom de l'autre projet">
+                <div class="projet-info">
+                    <h3>Nom de l'autre projet</h3>
+                    <p class="short-desc">Description de l'autre projet.</p>
+                    <a href="includes/views/projet/projet3.php" class="btn btn-outline-light" title="En savoir plus sur l'autre projet">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+
         </div>
-      </div>
-
-      <!-- Ajoute tes autres projets ici, même structure -->
-
     </div>
-  </div>
 </section>
 
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!--
+projet1.php : Calculatrice en Java
+projet2.php : Jeu du Fakir
+projet3.php : Autre projet (à définir)
+projet4.php : France Academy
+projet5.php : Stagelys
+projet6.php : Observatoire de Juvisy
+projet7.php : Projet Python
+
+-->
