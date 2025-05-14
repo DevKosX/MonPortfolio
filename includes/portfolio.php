@@ -14,7 +14,7 @@
             </div>
 
             <div class="projet">
-                <img src="public/images/stagelis.png" alt="Stagelys">
+                <img src="public/images/app.png" alt="Stagelys">
                 <div class="projet-info">
                     <h3>Stagelys</h3>
                     <p class="short-desc">Application web de gestion des stages pour étudiants et professeurs.</p>
@@ -48,7 +48,7 @@
 
 
             <div class="projet">
-                <img src="public/images/projet1.jpg" alt="Calculatrice en Java">
+                <img src="public/images/javac.png" alt="Calculatrice en Java">
                 <div class="projet-info">
                     <h3>Calculatrice Objet</h3>
                     <p class="short-desc">Une calculatrice simple et intuitive développée en Java.</p>

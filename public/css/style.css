@@ -1,10 +1,10 @@
-/* Styles globaux */
+/* Styles globaux (fond conservé) */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #D4D4D4; /* Texte principal */
-    background-color: #121212; /* Arrière-plan principal */
+    color: #D4D4D4;
+    background-color: #121212;
     scroll-behavior: smooth;
 }
 
@@ -14,85 +14,106 @@ body {
     margin: 0 auto;
 }
 
+/* Style de base pour les sections */
+section {
+    padding: 70px 30px; /* Espacement standard */
+    background-color: #121212; /* Même fond que le body */
+    color: #eee; /* Couleur de texte par défaut pour les sections */
+    /* Transitions pour un effet plus doux (facultatif) */
+    transition: box-shadow 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
+}
+
+/* Effets subtils pour séparer les sections */
+section + section {
+    /* Ajouter une légère marge pour l'espacement */
+    margin-top: 1px; /* Très léger espacement */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1), /* Ombre subtile en haut */
+                0 1px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile en bas */
+}
+
+/* En alternative, une bordure très discrète */
 h1, h2, h3, h4 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
+    font-family: 'Montserrat', sans-serif; /* Police moderne pour les titres */
+    font-weight: 700; /* Un peu moins gras pour un aspect plus actuel */
     margin: 0.5em 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px; /* Léger ajustement pour la lisibilité */
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 3em; /* Légèrement réduit pour un aspect plus équilibré */
 }
 
 h2 {
-    font-size: 2.5em; /* Taille unifiée pour les titres de section */
+    font-size: 2.2em; /* Taille unifiée pour les titres de section */
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 p {
-    line-height: 1.6;
-    font-weight: 300;
+    line-height: 1.7; /* Meilleure lisibilité pour le texte */
+    font-weight: 400; /* Un peu plus de corps pour la police simple */
 }
 
 a {
-    color: #4E94CE; /* Bleu des liens */
+    color: #5DADE2; /* Bleu légèrement différent pour un nouveau look */
     text-decoration: none;
+    transition: color 0.3s ease; /* Transition plus douce */
 }
 
 a:hover {
+    color: #2E86C1; /* Assombrissement subtil au survol */
     text-decoration: underline;
 }
 
 .btn {
-    background-color: #007ACC; /* Bleu des boutons */
+    background-color: #3498DB; /* Nouveau bleu pour les boutons */
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Légèrement plus de padding */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Bords un peu plus arrondis */
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
-    margin-top: 10px;
-    font-family: 'Exo 2', sans-serif;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    font-weight: 500; /* Un peu plus de poids pour les boutons */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background-color: #005EA3; /* Bleu des boutons au survol */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #2874A6; /* Assombrissement au survol */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn-close {
     filter: invert(1); /* blanc si fond sombre */
     opacity: 0.7;
     transition: opacity 0.2s ease;
-  }
-  
-  .btn-close:hover {
+}
+
+.btn-close:hover {
     opacity: 1;
-  }
-  
+}
+
 /* Navigation */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(18, 18, 18, 0.95); /* fond semi-transparent foncé */
+    background-color: rgba(18, 18, 18, 0.9); /* Légèrement moins opaque */
     z-index: 9999;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Ombre plus douce */
 }
 
 /* ===== Effet au scroll ===== */
 #navbar.scrolled {
     background-color: rgba(18, 18, 18, 0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légèrement différente au scroll */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -105,7 +126,7 @@ nav .container {
 
 nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Centrage des onglets par défaut */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -113,33 +134,38 @@ nav ul {
 
 nav ul li {
     position: relative;
+    margin: 0 15px; /* Espacement entre les onglets */
 }
+
 nav ul li a {
     color: #fff;
     background: transparent;
-    padding: 15px 20px; /* Ajout de padding pour un meilleur confort de clic */
-    display: block; /* Pour que le padding remplisse bien l'espace du li */
-    transition: color 0.3s ease, transform 0.3s ease; /* Transition douce pour la couleur et la position */
+    padding: 12px 18px; /* Ajustement du padding */
+    display: block;
+    transition: color 0.3s ease, transform 0.2s ease; /* Transition plus douce */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police simple pour la navigation */
+    font-weight: 400;
 }
 
 nav ul li a:hover {
-    color: #007ACC; /* Conserve la couleur bleue au survol */
-    background: transparent; /* S'assure qu'il n'y a pas de fond coloré */
-    text-decoration: none; /* Supprime le soulignement */
-    transform: translateY(-2px); /* Léger décalage vers le haut pour un effet subtil */
+    color: #3498DB; /* Nouveau bleu au survol */
+    background: transparent;
+    text-decoration: none;
+    transform: translateY(-1px); /* Effet de léger soulèvement */
 }
 
 nav ul li a.active {
-    color: #007ACC !important;
-    border-bottom: 2px solid #007ACC;
+    color: #3498DB !important;
+    border-bottom: 3px solid #3498DB; /* Indicateur d'onglet actif plus visible */
     background: transparent;
+    font-weight: 500; /* Légèrement plus épais pour l'onglet actif */
 }
 
 /* Neutraliser les effets natifs de focus */
 nav ul li a:focus,
 nav ul li a:active {
     outline: none;
-    background-color:#007ACC;
+    background-color: rgba(52, 152, 219, 0.2); /* Léger fond bleu au focus/actif */
 }
 
 @media (max-width: 768px) {
@@ -148,8 +174,18 @@ nav ul li a:active {
         align-items: center;
     }
 
+    nav ul li {
+        margin: 10px 0; /* Espacement vertical pour les petits écrans */
+    }
+
     nav ul li a {
-        padding: 12px 20px;
+        padding: 10px 20px;
+        width: 100%; /* Les liens prennent toute la largeur */
+        text-align: center;
+    }
+
+    nav ul li a.active {
+        border-bottom: 2px solid #3498DB; /* Ajustement pour les petits écrans */
     }
 }
 
@@ -157,7 +193,7 @@ header {
     background: url('path/to/your/header-background.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    padding: 150px 0 100px;
+    padding: 120px 0 80px; /* Ajustement du padding */
     position: relative;
     overflow: hidden;
 }
@@ -176,36 +212,40 @@ header video {
 }
 
 header h1 {
-    text-shadow: 2px 2px 3px #000;
+    text-shadow: 1px 1px 2px #000; /* Ombre plus subtile */
+    font-size: 3.2em; /* Légèrement plus grand que h2 */
 }
 
 header h2 {
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 3px #000;
+    margin-bottom: 25px; /* Ajustement de la marge */
+    text-shadow: 1px 1px 2px #000;
+    font-size: 1.8em; /* Taille plus cohérente avec les titres de section */
+    font-weight: 400; /* Moins gras pour un contraste avec h1 */
 }
 
 /* Style unifié pour les titres de section (h2) et leur décoration */
 section h2 {
     text-align: center;
-    font-size: 2.5em; /* Taille unifiée */
+    font-size: 2.2em; /* Taille unifiée */
     color: #ffffff;
-    margin-bottom: 40px; /* Espacement sous le titre */
+    margin-bottom: 35px; /* Espacement sous le titre */
     position: relative;
+    font-weight: 600; /* Un peu plus de poids */
 }
 
 section h2::after {
     content: "";
     display: block;
-    width: 60px; /* Taille unifiée du trait */
-    height: 4px;
-    background-color: #007ACC; /* Couleur unifiée du trait */
-    margin: 12px auto 0; /* Positionnement centré */
-    border-radius: 2px;
+    width: 50px; /* Taille unifiée du trait, légèrement plus court */
+    height: 3px; /* Hauteur du trait */
+    background-color: #3498DB; /* Couleur unifiée du trait */
+    margin: 10px auto 0; /* Positionnement centré */
+    border-radius: 1.5px; /* Bords légèrement arrondis */
 }
 
 /* === SECTION À PROPOS === */
 #apropos {
-    padding: 80px 40px;
+    padding: 70px 30px; /* Ajustement du padding */
     background-color: #121212;
     color: #eee;
 }
@@ -215,7 +255,7 @@ section h2::after {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
+    gap: 30px; /* Ajustement de l'écart */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -223,7 +263,7 @@ section h2::after {
 #apropos .text {
     flex: 1 1 55%;
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1.05rem; /* Légèrement plus petit */
     line-height: 1.7;
     color: #ccc;
 }
@@ -235,25 +275,25 @@ section h2::after {
     align-items: center;
     background-color: #1E1E1E;
     border: 1px solid #3A3A3A;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 12px; /* Bords moins prononcés */
+    padding: 25px; /* Légèrement moins de padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus douce */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #apropos .cv:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px); /* Moins de soulèvement */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée au survol */
 }
 
 #apropos .cv-preview {
     width: 100%;
-    max-width: 280px;
-    border-radius: 12px;
+    max-width: 260px; /* Légèrement plus petit */
+    border-radius: 10px; /* Bords moins prononcés */
     cursor: pointer;
     border: none;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 18px; /* Ajustement de la marge */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Ombre plus douce */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -265,137 +305,139 @@ section h2::after {
 }
 
 #apropos .cv-preview:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02); /* Moins de zoom */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
 }
 
 #apropos .download {
     display: inline-block;
-    background-color: #007ACC;
+    background-color: #3498DB;
     color: white;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 6px; /* Bords moins prononcés */
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
 #apropos .download:hover {
-    background-color: #005fa3;
+    background-color: #2874A6;
 }
 
-/* === MODAL CV === */
-/* Style du modal */
 /* === MODAL CV === */
 /* Style du modal */
 .modal {
     display: none; /* caché par défaut */
     position: fixed;
     z-index: 1000;
-    padding-top: 60px;
+    padding-top: 50px; /* Ajustement du padding */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.8); /* fond sombre */
-  }
+}
 
-  /* L'image dans le modal */
-  .modal-content {
+.modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
-    width: 90%;
-    max-height: 80vh;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
-  }
-
-  /* Bouton pour fermer */
-  .close {
+    max-width: 95%; /* Laisse un peu de marge */
+    width: auto; /* Permet à l'image de s'adapter à sa taille réelle */
+    max-height: 90vh; /* Prend plus de hauteur si nécessaire */
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
+}
+/* Bouton pour fermer */
+.close {
     position: absolute;
-    top: 25px;
-    right: 35px;
+    top: 15px; /* Ajustement de la position */
+    right: 25px; /* Ajustement de la position */
     color: white;
-    font-size: 40px;
+    font-size: 35px; /* Légèrement plus petit */
     font-weight: bold;
     cursor: pointer;
     z-index: 1001;
-  }
+    opacity: 0.8; /* Légèrement moins opaque */
+    transition: opacity 0.2s ease;
+}
 
 .close:hover,
 .close:focus {
-    color: #999; /* ou #bbb selon votre version du CSS */
+    color: #ccc; /* Gris plus clair au survol */
     text-decoration: none;
     cursor: pointer;
+    opacity: 1;
 }
 
 #projets {
-    padding: 60px 0;
+    padding: 50px 0; /* Ajustement du padding */
 }
 
 .projets-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Légèrement plus petit pour plus de réactivité */
+    gap: 25px; /* Ajustement de l'écart */
 }
 
 .projet {
     background-color: #1E1E1E; /* Gris foncé */
-    border-radius: 10px;
+    border-radius: 8px; /* Bords moins prononcés */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* Ombre plus douce */
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projet:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px); /* Moins de soulèvement */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Ombre plus prononcée au survol */
 }
 
 .projet img {
     width: 100%;
-    height: 250px;
+    height: 220px; /* Légèrement plus petit */
     object-fit: cover;
 }
 
 .projet-info {
-    padding: 20px;
+    padding: 18px; /* Légèrement moins de padding */
 }
 
 .projet .short-desc {
-    font-size: 1em;
+    font-size: 0.95em; /* Légèrement plus petit */
     color: #999; /* Gris moyen */
+    line-height: 1.6;
 }
 
 
 .projet-details p {
     color: #999; /* Gris moyen */
-    margin-bottom: 15px;
+    margin-bottom: 12px; /* Ajustement de la marge */
+    line-height: 1.6;
 }
 
 .projet-details ul {
-    margin-bottom: 15px;
+    margin-bottom: 12px; /* Ajustement de la marge */
     padding-left: 20px;
 }
 
 .projet-details ul li {
     color: #999;
-    margin-bottom: 5px;
+    margin-bottom: 4px; /* Ajustement de la marge */
+    line-height: 1.6;
 }
 
 footer {
     background-color: #252526;
-    padding: 20px 0;
+    padding: 25px 0; /* Ajustement du padding */
     text-align: center;
 }
 
 /* Styles pour la section compétences, cohérents avec le reste du site */
 #competences {
-    padding: 60px 20px; /* Espacement intérieur, similaire aux autres sections */
-    background-color: #1E1E1E; /* Couleur de fond gris foncé, comme #apropos et footer */
+    padding: 50px 20px; /* Espacement intérieur */
+    background-color: #1E1E1E; /* Couleur de fond gris foncé */
     color: #D4D4D4; /* Couleur du texte principal */
     text-align: center; /* Centrer le texte principal */
 }
@@ -407,34 +449,34 @@ footer {
 }
 
 #competences h1 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
-    font-size: 2.5em; /* Taille de h2 des autres sections */
-    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.2em; /* Taille de h2 des autres sections */
+    margin-bottom: 12px; /* Ajustement de la marge */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 #competences p {
-    font-weight: 300;
-    line-height: 1.6;
+    font-weight: 400;
+    line-height: 1.7;
     color: #999; /* Gris moyen pour le paragraphe */
-    margin-bottom: 30px;
+    margin-bottom: 25px; /* Ajustement de la marge */
 }
 
 
 .competences_div {
-    margin-bottom: 40px;
+    margin-bottom: 35px; /* Ajustement de la marge */
     text-align: center; /* Centrer le contenu de chaque div */
 }
 
 .competences_div h3 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
-    font-size: 1.5em; /* Taille de h3 des autres sections */
-    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4em; /* Taille de h3 des autres sections */
+    margin-bottom: 12px; /* Ajustement de la marge */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: #D4D4D4; /* Couleur du texte */
 }
 
@@ -442,7 +484,7 @@ footer {
     display: flex; /* Utiliser Flexbox pour l'alignement horizontal */
     flex-wrap: wrap; /* Passer à la ligne si l'espace est insuffisant */
     justify-content: center; /* Centrer les éléments horizontalement */
-    gap: 30px; /* Espacement entre les icônes */
+    gap: 20px; /* Espacement entre les icônes */
 }
 
 .competences_img figure {
@@ -458,33 +500,36 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: color 0.3s ease;
+}
+
+.competences_img a:hover {
+    color: #fff;
 }
 
 .competences_img img {
-    height: 100px;
+    height: 80px; /* Taille des icônes */
     max-width: 100%;
-    margin-bottom: 5px;
-    /* Supprimer le filtre grayscale */
-    transition: transform 0.3s ease;
+    margin-bottom: 8px; /* Espacement sous l'image */
+    transition: transform 0.2s ease;
 }
 
 .competences_img img:hover {
-    transform: scale(1.05); /* Un petit effet de zoom à la place ? */
+    transform: scale(1.1); /* Léger effet de zoom au survol */
 }
 
 .competences_img figcaption {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 400;
     color: #CCCCCC; /* Un gris plus clair pour la lisibilité */
-    margin-top: 8px;
-    letter-spacing: 0.5px;
+    margin-top: 5px;
+    letter-spacing: 0.3px;
     text-transform: uppercase;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .competences_img figure:hover figcaption {
     color: #ffffff;
-    transform: scale(1.05);
 }
 
 /* Responsive pour les écrans plus petits */
@@ -498,17 +543,17 @@ footer {
     }
 
     .competences_img {
-        gap: 20px;
+        gap: 15px;
     }
 
     .competences_img img {
-        height: 80px;
+        height: 60px;
     }
 }
 
 /* Section expériences */
 #experience {
-    padding: 60px 20px;
+    padding: 50px 20px; /* Ajustement du padding */
     background-color: #252526; /* Fond sombre */
     color: #D4D4D4; /* Texte gris clair*/
     text-align: center;
@@ -525,7 +570,7 @@ footer {
     content: '';
     position: absolute;
     width: 2px;
-    background-color: #007ACC;
+    background-color: #3498DB; /* Nouvelle couleur pour la ligne */
     top: 0;
     bottom: 0;
     left: 50%;
@@ -542,11 +587,11 @@ footer {
 .timeline-container::after {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
+    width: 20px; /* Légèrement plus petit */
+    height: 20px; /* Légèrement plus petit */
+    right: -10px; /* Ajustement de la position */
     background-color: #1E1E1E;
-    border: 4px solid #007ACC;
+    border: 3px solid #3498DB; /* Nouvelle couleur de bordure */
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -561,33 +606,36 @@ footer {
 }
 
 .right-container::after {
-    left: -17px;
+    left: -10px; /* Ajustement de la position */
 }
 
 .content {
-    padding: 20px 30px;
+    padding: 15px 25px; /* Légèrement moins de padding */
     background-color: #1E1E1E;
     position: relative;
     border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Ombre plus douce */
 }
 
 .content h3 {
-    font-size: 1.3em;
-    margin-bottom: 5px;
+    font-size: 1.2em;
+    margin-bottom: 3px; /* Ajustement de la marge */
     color: #ffffff;
+    font-weight: 600;
 }
 
 .content p {
-    font-size: 1em;
+    font-size: 0.95em;
     color: #999;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .content .date {
     font-style: italic;
     color: #ccc;
-    margin-top: 10px;
+    margin-top: 8px; /* Ajustement de la marge */
     display: block;
+    font-size: 0.85em;
 }
 
 @media screen and (max-width: 600px) {
@@ -597,17 +645,17 @@ footer {
 
     .timeline-container {
         width: 100%;
-        padding-left: 80px;
+        padding-left: 70px; /* Ajustement du padding */
         padding-right: 20px;
     }
 
     .timeline-container::after {
-        left: 18px;
+        left: 15px; /* Ajustement de la position */
     }
 
     .left-container::after,
     .right-container::after {
-        left: 18px;
+        left: 15px; /* Ajustement de la position */
     }
 
     .right-container {
@@ -617,30 +665,32 @@ footer {
 
 /* Section contact */
 #contact {
-    padding: 80px 20px;
+    padding: 70px 20px; /* Ajustement du padding */
     background-color: #121212;
     color: #D4D4D4;
     text-align: center;
 }
 
 .contact-form {
-    max-width: 600px;
-    margin: 30px auto 0;
+    max-width: 550px; /* Légèrement plus petit */
+    margin: 25px auto 0; /* Ajustement de la marge */
     text-align: left;
     padding: 20px;
     background-color: #1E1E1E;
     border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Ombre plus douce */
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px; /* Ajustement de la marge */
 }
 
 .form-group label {
     display: block;
     color: #eee;
-    margin-bottom: 5px;
+    margin-bottom: 4px; /* Ajustement de la marge */
     font-weight: 300;
+    font-size: 0.95em;
 }
 
 .form-group input[type="text"],
@@ -653,11 +703,13 @@ footer {
     background-color: #252526;
     color: #eee;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police simple pour les inputs */
+    font-size: 1em;
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 150px;
+    min-height: 120px; /* Légèrement plus petit */
 }
 
 .form-group .btn {
@@ -669,34 +721,38 @@ footer {
 
 .btn-submit {
     width: 100%;
-    padding: 12px;
-    background-color: #007BFF; /* ou une autre couleur de ton thème */
+    padding: 10px; /* Légèrement moins de padding */
+    background-color: #3498DB; /* Nouvelle couleur pour le bouton */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px; /* Bords moins prononcés */
     font-weight: bold;
     transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1em;
 }
 
 .btn-submit:hover {
-    background-color: #0056b3;
+    background-color: #2874A6;
 }
 
 /* Pied de page */
 footer {
     background-color: #252526;
-    padding: 30px 0;
+    padding: 20px 0; /* Ajustement du padding */
     text-align: center;
     color: #999;
     font-size: 0.9em;
 }
 
 footer p {
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Ajustement de la marge */
 }
 
 footer a {
-    color: #4E94CE;
+    color: #5DADE2; /* Nouvelle couleur pour les liens */
 }
 
 footer a:hover {
@@ -707,3 +763,4 @@ html {
     scroll-behavior: smooth;
 }
 /* Animation de défilement */
+

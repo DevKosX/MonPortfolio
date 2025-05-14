@@ -1,40 +1,40 @@
 /* public/css/projet_detail.css */
 
 .detail-projet {
-    padding-top: 80px; /* Ajuster selon la hauteur de ta barre de navigation */
-    padding-bottom: 60px;
+    padding-top: 90px; /* Ajuster selon la hauteur de ta barre de navigation + un peu d'espace */
+    padding-bottom: 70px;
     color: #D4D4D4; /* Couleur du texte principal */
     background-color: #121212; /* Fond principal (comme le body) */
 }
 
 .detail-projet h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     color: #ffffff;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
+    font-family: 'Montserrat', sans-serif; /* Police moderne pour les titres */
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 2.5em; /* Taille unifiée pour les titres de section */
+    letter-spacing: 0.5px;
+    font-size: 2.2em; /* Taille unifiée pour les titres de section (légèrement réduite) */
 }
 
 .projet-details-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #1E1E1E; /* Fond des blocs de contenu (comme les sections) */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #1E1E1E; /* Fond des blocs de contenu */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Ombre plus douce */
 }
 
 .projet-image {
     flex: 1 1 400px;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Ombre plus douce */
 }
 
 .projet-image img {
@@ -50,55 +50,59 @@
 .projet-description h2,
 .projet-description h3 {
     color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif; /* Police moderne pour les sous-titres */
+    font-weight: 600; /* Un peu moins gras que le titre principal */
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    font-size: 1.5em; /* Taille des sous-titres */
+    letter-spacing: 0.5px;
+    font-size: 1.4em; /* Taille des sous-titres (légèrement réduite) */
 }
 
 .projet-description ul {
     list-style: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
+    padding-left: 25px;
+    margin-bottom: 25px;
 }
 
 .projet-description li {
-    line-height: 1.6;
+    line-height: 1.7;
     color: #999;
-    font-weight: 300;
+    font-weight: 400; /* Plus de corps pour la police simple */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police simple pour le texte */
+    font-size: 1em;
 }
 
 /* Style du bouton "Retour aux Projets" */
 .projet-description .btn-retour-projets {
-    background-color: #007ACC; /* Bleu des boutons */
+    background-color: #3498DB; /* Nouveau bleu des boutons */
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
-    margin-top: 30px;
-    font-family: 'Exo 2', sans-serif;
+    margin-top: 35px;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
     text-decoration: none; /* Pour que le bouton ressemble à un bouton */
 }
 
 .projet-description .btn-retour-projets:hover {
-    background-color: #005EA3; /* Bleu des boutons au survol */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #2874A6; /* Bleu des boutons au survol (assombri) */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive pour les écrans plus petits */
 @media (max-width: 768px) {
     .projet-details-container {
         flex-direction: column;
-        padding: 20px;
+        padding: 25px;
+        gap: 30px;
     }
 
     .projet-image {
@@ -106,6 +110,23 @@
     }
 
     .projet-description {
-        padding-top: 20px;
+        padding-top: 25px;
+    }
+
+    .projet-description h2,
+    .projet-description h3 {
+        margin-top: 15px;
+        font-size: 1.3em;
+    }
+
+    .projet-description ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .projet-description .btn-retour-projets {
+        margin-top: 25px;
+        padding: 10px 20px;
+        font-size: 0.9em;
     }
 }
