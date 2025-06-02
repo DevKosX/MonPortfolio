@@ -12,7 +12,7 @@
             </p>
         </div>
         <div class="cv">
-            <img src="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.jpg" alt="Prévisualisation du CV" class="cv-preview" onclick="openCvModal();">
+            <img src="MonPorfolio/public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.jpg" alt="Prévisualisation du CV" class="cv-preview" onclick="openCvModal();">
             <a href="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.pdf" class="btn download" download="CV_2024-12-21_Mohamed_Kosbar_page-0001.pdf" title="Téléchargez mon CV au format PDF">
                 Télécharger mon CV
             </a>
