@@ -1,28 +1,28 @@
 <?php
-// Définir les variables pour l'en-tête
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom si différent
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description si différente
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
-// Informations spécifiques à l'expérience chez OFW Ships
 $nomExperience = "Stage chez OFW Ships";
-$imagePrincipale = "../../../public/images/ofw_detail.jpg"; // Chemin vers une image détaillée du stage (À REMPLACER)
-$descriptionLongue = "Stage de 8 semaines en développement web effectué au sein de l’entreprise Devea pour leur client OFW Ships. Durant ce stage, j'ai été intégré à l'équipe de développement et j'ai participé à [Décris tes tâches principales et les projets sur lesquels tu as travaillé]. J'ai pu mettre en pratique mes compétences en [Liste les compétences que tu as utilisées et développées]. (À REMPLACER avec une description détaillée de ton stage)";
+$imagePrincipale = "../../../public/images/ofw_detail.jpg";
+
+$descriptionLongue = "Ce stage de 8 semaines, effectué au sein de la société Devea pour le client OFW Ships, m'a permis de travailler dans un environnement professionnel sur des projets concrets de développement web. J'ai participé à la conception, au développement et à l'intégration de nouvelles fonctionnalités pour la plateforme de gestion des navires. Cette expérience m'a permis de renforcer mes compétences techniques, ma capacité à collaborer au sein d'une équipe, et ma compréhension du cycle complet de développement.";
+
 $entreprise = "Devea (pour le client OFW Ships)";
 $duree = "8 semaines";
-$periodes = "Date de début - Date de fin"; // Remplace par les dates réelles
+$periodes = "Avril 2024 - Juin 2024";
+
 $competencesAcquises = [
-    "Développement Web (HTML, CSS, JavaScript, PHP, etc.)", // Liste les compétences techniques
-    "Travail en équipe",
-    "Gestion de projet",
-    "Communication professionnelle",
-    "Adaptabilité",
-    // Ajouter d'autres compétences acquises (À REMPLACER)
+    "Développement Web (HTML, CSS, JavaScript, PHP)",
+    "Utilisation de frameworks PHP modernes",
+    "Travail en équipe agile",
+    "Gestion de versions avec Git",
+    "Communication professionnelle en entreprise",
 ];
+
 $realisations = [
-    "Participation au développement de [Nom du projet ou de la fonctionnalité]", // Décris tes réalisations concrètes
-    "Mise en place de [Description d'une tâche spécifique]",
-    "Contribution à l'amélioration de [Aspect spécifique]",
-    // Ajouter d'autres réalisations (À REMPLACER)
+    "Développement d’un module de suivi de maintenance des navires",
+    "Implémentation d’un tableau de bord interactif avec graphiques dynamiques",
+    "Optimisation de requêtes SQL pour accélérer les temps de réponse",
 ];
 ?>
 
@@ -35,17 +35,16 @@ $realisations = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
-        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
-            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
-            z-index: 9998; /* Placer au-dessus du contenu principal */
+            background-color: rgba(18, 18, 18, 0.8);
+            z-index: 9998;
         }
+
         .retour-en-haut .btn-retour-experiences {
             background-color: #007ACC;
             color: #fff;
@@ -54,22 +53,24 @@ $realisations = [
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            display: inline-block;
-            margin-top: 0;
             font-family: 'Exo 2', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
             text-decoration: none;
         }
+
         .retour-en-haut .btn-retour-experiences:hover {
             background-color: #005EA3;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
+        }
+
+        .projet-description {
+            text-align: justify;
         }
     </style>
 </head>
@@ -86,9 +87,8 @@ $realisations = [
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
+
     <div class="retour-en-haut">
         <a href="../../../index.php#experience" class="btn-retour-experiences">Retour aux Expériences</a>
     </div>
@@ -128,11 +128,10 @@ $realisations = [
         </div>
     </main>
 
-    <?php
-    // Définir la variable pour le pied de page
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email si différent
-    include_once("../../../includes/footer.php"); // Assure-toi que le chemin vers ton footer est correct
-    ?>
+    <footer style="text-align:center; padding:20px; font-size:0.9em; color:#aaa;">
+        Tous droits réservés © 2025 Mohamed Kosbar
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

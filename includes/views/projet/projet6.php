@@ -1,30 +1,31 @@
 <?php
 // Définir les variables pour l'en-tête
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom si différent
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description si différente
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
 // Informations spécifiques au projet Observatoire de Juvisy
 $nomProjet = "Observatoire de Juvisy";
-$imagePrincipale = "../../../public/images/observatoire_detail.jpg"; // Chemin vers une image détaillée de l'observatoire (À REMPLACER)
-$descriptionLongue = "Projet de recueil des besoins mené pour l'Observatoire de Juvisy. Ce projet visait à identifier et documenter les besoins spécifiques de l'observatoire en termes de systèmes informatiques, de gestion des données astronomiques, de communication avec le public, et d'outils de recherche. (À REMPLACER avec une description détaillée du projet et de ta contribution)";
+$imagePrincipale = "../../../public/images/ojs.jpg";
+$descriptionLongue = "Ce projet a été réalisé dans le cadre d'une mission de recueil des besoins pour l'Observatoire de Juvisy. L'objectif principal était de comprendre les attentes de l'institution en matière de gestion des données scientifiques, d'amélioration de la communication avec le public, et d’optimisation des outils numériques. J’ai conduit des entretiens avec les parties prenantes, analysé les processus existants, et formulé des recommandations détaillées sous forme de rapport fonctionnel.";
+
 $technologiesUtilisees = [
-    "Méthodologies de recueil des besoins (entretiens, questionnaires, etc.)",
-    "Outils de documentation et de reporting",
-    // Ajouter d'autres outils ou compétences spécifiques utilisées (À REMPLACER)
+    "Méthodologies de recueil des besoins (entretiens, questionnaires, ateliers)",
+    "Outils de documentation (Google Docs, Notion)",
+    "Analyse fonctionnelle et rédaction de cahiers des charges"
 ];
+
 $fonctionnalites = [
-    "Identification des parties prenantes et de leurs besoins",
-    "Conduite d'entretiens et d'ateliers de travail",
-    "Élaboration de questionnaires pour la collecte d'informations",
-    "Analyse et synthèse des besoins recueillis",
-    "Rédaction de rapports et de spécifications fonctionnelles",
-    "Présentation des résultats et des recommandations",
-    // Ajouter d'autres aspects ou livrables du projet (À REMPLACER)
+    "Identification des parties prenantes internes et externes",
+    "Conduite d'entretiens qualitatifs avec les responsables de l’observatoire",
+    "Élaboration de questionnaires pour la collecte structurée d'informations",
+    "Analyse des besoins fonctionnels et techniques",
+    "Rédaction d’un rapport de synthèse avec recommandations",
+    "Présentation orale des résultats à l’équipe de direction"
 ];
+
 $liensUtiles = [
-    // Si tu as des documents publics ou un lien vers le site de l'observatoire, ajoute-les ici
-    // "Site de l'Observatoire de Juvisy" => "URL_DE_L_OBSERVATOIRE", (À REMPLACER)
-    // "Rapport de Recueil des Besoins (si public)" => "URL_DU_RAPPORT", (À REMPLACER)
+    "Code source sur GitHub" => "https://github.com/DevKosX/ObservatoireDeJuvisy",
+    "Site de l'Observatoire de Juvisy" => "https://www.observatoire-juvisy.fr/"
 ];
 ?>
 
@@ -37,16 +38,14 @@ $liensUtiles = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
-        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
-            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
-            z-index: 9998; /* Placer au-dessus du contenu principal */
+            background-color: rgba(18, 18, 18, 0.8);
+            z-index: 9998;
         }
         .retour-en-haut .btn-retour-projets {
             background-color: #007ACC;
@@ -68,8 +67,6 @@ $liensUtiles = [
             background-color: #005EA3;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
-
-        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
         }
@@ -88,9 +85,9 @@ $liensUtiles = [
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
+
+    <br><br><br>
+
     <div class="retour-en-haut">
         <a href="../../../index.php#projets" class="btn-retour-projets">Retour aux Projets</a>
     </div>
@@ -103,7 +100,7 @@ $liensUtiles = [
                 <img src="<?= $imagePrincipale ?>" alt="<?= $nomProjet ?>">
             </div>
 
-            <div class="projet-description">
+            <div class="projet-description" style="text-align: justify;">
                 <h2>Description du Projet</h2>
                 <p><?= $descriptionLongue ?></p>
 
@@ -134,10 +131,10 @@ $liensUtiles = [
     </main>
 
     <?php
-    // Définir la variable pour le pied de page
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email si différent
-    include_once("../../../includes/footer.php"); // Assure-toi que le chemin vers ton footer est correct
+    $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
+    include_once("../../../includes/footer.php");
     ?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

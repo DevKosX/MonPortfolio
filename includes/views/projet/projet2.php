@@ -1,26 +1,24 @@
 <?php
-// Définir les variables pour l'en-tête (même si non inclus)
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
-// Récupérer le nom du projet (pour le titre de la page et potentiellement d'autres infos)
-$nomProjet = "Jeu du Fakir"; // Nom du projet
-$imagePrincipale = "../../../public/images/projet2_fakir.jpg"; // Chemin vers l'image du jeu (À REMPLACER)
-$descriptionLongue = "Description détaillée du Jeu du Fakir développé en Java et Swing. Explique le concept du jeu, les règles, les objectifs, etc. (À REMPLACER)";
+$nomProjet = "Jeu du Fakir";
+$imagePrincipale = "../../../public/images/fakir.jpg";
+$descriptionLongue = "Ce projet est une simulation graphique du Jeu du Fakir, développé en Java à l'aide de Swing. Le but est de faire tomber une bille dans un tableau de clous en évitant les obstacles. Le parcours est aléatoire et permet une visualisation en temps réel. Ce jeu met en valeur les principes de la programmation orientée objet ainsi que la gestion d'événements dans une interface utilisateur Java.";
 $technologiesUtilisees = [
     "Java",
     "Swing (pour l'interface graphique)",
-    // Ajouter d'autres technologies si nécessaire (À REMPLACER)
+    "Programmation orientée objet",
+    "Gestion d'événements",
 ];
 $fonctionnalites = [
     "Interface utilisateur graphique interactive",
-    "Gestion des niveaux de difficulté (si applicable)",
-    "Système de score (si applicable)",
-    // Ajouter d'autres fonctionnalités (À REMPLACER)
+    "Simulation du parcours d'une bille",
+    "Disposition aléatoire ou paramétrée des obstacles",
+    "Système de score visuel (optionnel)",
 ];
 $liensUtiles = [
-    "Code Source (GitHub)" => "https://github.com/tonpseudo/jeu-du-fakir", // Remplace par ton lien GitHub (À REMPLACER)
-    "Démonstration (si applicable)" => "https://tonsite.com/jeu-du-fakir-demo", // Remplace par un lien de démo si tu en as un (À REMPLACER)
+    "Code Source (GitHub)" => "https://github.com/DevKosX/JeuDuFakir/",
 ];
 ?>
 
@@ -33,16 +31,14 @@ $liensUtiles = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
-        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
-            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
-            z-index: 9998; /* Placer au-dessus du contenu principal */
+            background-color: rgba(18, 18, 18, 0.8);
+            z-index: 9998;
         }
         .retour-en-haut .btn-retour-projets {
             background-color: #007ACC;
@@ -53,7 +49,6 @@ $liensUtiles = [
             cursor: pointer;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             display: inline-block;
-            margin-top: 0;
             font-family: 'Exo 2', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -65,9 +60,12 @@ $liensUtiles = [
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
+        }
+
+        .projet-description {
+            text-align: justify;
         }
     </style>
 </head>
@@ -77,7 +75,6 @@ $liensUtiles = [
             <ul>
                 <li><a href="../../../index.php#accueil">Accueil</a></li>
                 <li><a href="../../../index.php#apropos">Qui suis-je ?</a></li>
-
                 <li><a href="../../../index.php#competences">Compétences</a></li>
                 <li><a href="../../../index.php#projets" class="active">Projets</a></li>
                 <li><a href="../../../index.php#experience">Expériences</a></li>
@@ -85,9 +82,8 @@ $liensUtiles = [
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
+
     <div class="retour-en-haut">
         <a href="../../../index.php#projets" class="btn-retour-projets">Retour aux Projets</a>
     </div>
@@ -130,12 +126,10 @@ $liensUtiles = [
         </div>
     </main>
 
-    <?php
-    // Définir la variable pour le pied de page (même si footer non inclus)
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email
-    // Ne pas inclure le footer
-    include_once("../../../includes/footer.php");
-    ?>
+    <footer style="text-align:center; padding:20px; font-size:0.9em; color:#aaa;">
+        Tous droits réservés © 2025 Mohamed Kosbar
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

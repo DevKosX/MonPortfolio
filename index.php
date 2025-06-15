@@ -1,53 +1,40 @@
-<!-- 
-// // index.php
-
-// // --- LOGIQUE DE TRAITEMENT DU FORMULAIRE DE CONTACT (COPIÉE DE contact.php) ---
-// session_start();
-
-// $to = "mohamed-kosbar@edu.univ-paris13.fr";
-// $errors = [];
-// $success = false;
-
-// if (empty($_SESSION['csrf_token'])) {
-//     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-// }
-
-// if ($_SERVER["REQUEST_METHOD"] === "POST") {
-//     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-//         $errors[] = "Erreur de sécurité. Veuillez recharger la page.";
-//     }
-
-//     $name = trim($_POST["name"] ?? '');
-//     $email = trim($_POST["email"] ?? '');
-//     $subject = trim($_POST["subject"] ?? '');
-//     $message = trim($_POST["message"] ?? '');
-
-//     if (empty($name)) $errors[] = "Votre nom est requis.";
-//     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Votre adresse e-mail est invalide.";
-//     if (empty($subject)) $errors[] = "L'objet est requis.";
-//     if (empty($message)) $errors[] = "Le message est requis.";
-
-//     if (empty($errors)) {
-//         // ... (Votre code d'envoi d'e-mail ici - mail() ou PHPMailer) ...
-//         $headers = "From: " . $name . " <" . $email . ">\r\n";
-//         $headers .= "Reply-To: " . $email . "\r\n";
-//         $headers .= "Content-Type: text/plain; charset=UTF-8";
-//         $headers .= "X-Mailer: PHP/" . phpversion();
-
-//         $body = "Nom: $name\nEmail: $email\nObjet: $subject\n\nMessage:\n$message";
-
-//         if (mail($to, '[PORTFOLIO] ' . $subject, $body, $headers)) {
-//             $success = true;
-//             $_POST = [];
-//         } else {
-//             $errors[] = "Une erreur est survenue lors de l’envoi du message. Veuillez réessayer plus tard.";
-//             error_log("Erreur lors de l'envoi de l'e-mail : " . print_r(error_get_last(), true));
-//         }
-//     }
-// } -->
-
-
 <?php
+session_start();
+
+// --- Traitement formulaire contact ici ---
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["message"])) {
+    // Traitement du formulaire
+    $nom     = htmlspecialchars($_POST["name"]);
+    $email   = htmlspecialchars($_POST["email"]);
+    $sujet   = "🔔 Nouveau message depuis le portfolio - $nom";
+    $message = htmlspecialchars($_POST["message"]);
+
+    $contenuMessage = "📬 Quelqu’un a essayé de vous contacter via votre portfolio.\n\n"
+        . "👤 Nom : $nom\n"
+        . "📧 Email : $email\n"
+        . "💬 Message :\n$message";
+
+    $retour = mail(
+        "mohamed-kosbar@edu.univ-paris13.fr",
+        $sujet,
+        $contenuMessage,
+        "From: contact@monsite.fr\r\n" .
+        "Reply-To: $email"
+    );
+
+    if ($retour) {
+        $_SESSION['feedback'] = "Merci ! Votre message a été envoyé avec succès.";
+        $_SESSION['feedbackClass'] = "success-message";
+    } else {
+        $_SESSION['feedback'] = "Une erreur s'est produite lors de l'envoi de votre message.";
+        $_SESSION['feedbackClass'] = "error-message";
+    }
+
+    // Redirection pour éviter le re-POST
+    header("Location: " . $_SERVER['PHP_SELF'] . "#contact");
+    exit();
+}
+
 require 'config.php';
 
 include 'includes/header.php';
@@ -56,7 +43,7 @@ include 'includes/skills.php';
 include 'includes/portfolio.php';
 include 'includes/experience.php';
 
-// // --- INCLUSION DU FORMULAIRE DE CONTACT HTML UNIQUEMENT ---
+// --- INCLUSION DU FORMULAIRE DE CONTACT HTML UNIQUEMENT ---
 include 'includes/contact.php';
 
 include 'includes/footer.php';

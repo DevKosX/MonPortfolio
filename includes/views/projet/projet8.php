@@ -3,29 +3,36 @@
 $owner_name = "Mohamed Kosbar";
 $owner_description = "Développeur Web Passionné";
 
-// Informations spécifiques au projet France Academy
-$nomProjet = "France Academy";
-$imagePrincipale = "../../../public/images/fa.png";
-$descriptionLongue = "Plateforme web complète de gestion des formations et des utilisateurs, développée pour un organisme de formation fictif. Elle permet de gérer le catalogue des formations, les inscriptions des utilisateurs, les sessions de formation, et potentiellement les formateurs et les évaluations.";
+// Informations spécifiques au projet
+$nomProjet = "Boot Complet sur Disque Dur Externe Raspberry Pi";
+$imagePrincipale = "../../../public/images/boot.jpg"; // Chemin vers une image pertinente (À CRÉER/REMPLACER)
+$descriptionLongue = "Ce projet consistait à configurer un Raspberry Pi pour démarrer son système d'exploitation directement depuis un disque dur externe, plutôt que depuis la carte SD interne. Cette approche permet d'améliorer considérablement les performances, la fiabilité et la capacité de stockage du Raspberry Pi. Le projet a également intégré la mise en place de bases de données, la configuration réseau avancée, le développement d'applications en C, et l'analyse du trafic réseau pour optimiser les performances et la sécurité. Cela a démontré ma capacité à gérer des architectures système complexes, de l'optimisation matérielle à la programmation bas niveau et à la sécurité réseau.";
 $technologiesUtilisees = [
-    "PHP",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Laravel (framework PHP)",
-    "Bootstrap (pour le design)",
-    "Base de données (PostgreSQL)",
+    "Raspberry Pi",
+    "Linux (distribution basée sur Debian)",
+    "Disque Dur Externe (HDD/SSD)",
+    "MySQL / MariaDB",
+    "C (Programmation système et d'applications)",
+    "Réseaux TCP/IP",
+    "Wireshark (Analyse de paquets)",
+    "Scripts Shell (Bash)",
+    "Gestion des droits et permissions (Linux)",
 ];
 $fonctionnalites = [
-    "Gestion du catalogue des formations (création, lecture, mise à jour, suppression)",
-    "Inscription et gestion des profils utilisateurs",
-    "Planification et gestion des sessions de formation",
-    "Gestion des formateurs (si applicable)",
-    "Système d'authentification et d'autorisation",
-    "Interface d'administration pour la gestion globale de la plateforme",
+    "Configuration du Raspberry Pi pour le démarrage sur HDD/SSD externe",
+    "Installation et optimisation du système d'exploitation Linux sur le disque dur externe",
+    "Mise en place et administration de bases de données MySQL/MariaDB pour des applications embarquées",
+    "Développement d'applications en langage C pour interagir avec le système et le matériel",
+    "Configuration de services réseau et optimisation de la connectivité",
+    "Analyse approfondie du trafic réseau avec Wireshark pour le débogage et la sécurité",
+    "Implémentation de mécanismes de gestion des droits et de la sécurité du système",
+    "Automatisation de tâches via des scripts Shell",
 ];
 $liensUtiles = [
-    "Code Source (GitHub)" => "https://github.com/DevKosX/FranceAcademy",
+    // Si tu as des dépôts GitHub, des documentations ou des tutoriels que tu as créés, ajoute-les ici.
+    // Exemple :
+    // "Dépôt GitHub du projet (si public)" => "URL_DE_TON_REPO_GITHUB",
+    // "Tutoriel de Configuration (si disponible)" => "URL_DE_TON_TUTORIEL",
 ];
 ?>
 
@@ -38,6 +45,7 @@ $liensUtiles = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
+        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
@@ -67,6 +75,8 @@ $liensUtiles = [
             background-color: #005EA3;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
+
+        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
         }
@@ -85,7 +95,9 @@ $liensUtiles = [
             </ul>
         </div>
     </nav>
-    <br><br><br>
+    <br>
+    <br>
+    <br>
     <div class="retour-en-haut">
         <a href="../../../index.php#projets" class="btn-retour-projets">Retour aux Projets</a>
     </div>
@@ -132,7 +144,6 @@ $liensUtiles = [
     $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
     include_once("../../../includes/footer.php");
     ?>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

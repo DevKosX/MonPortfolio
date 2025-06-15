@@ -14,15 +14,6 @@ body {
     margin: 0 auto;
 }
 
-/* Style de base pour les sections */
-section {
-    padding: 70px 30px; /* Espacement standard */
-    background-color: #121212; /* Même fond que le body */
-    color: #eee; /* Couleur de texte par défaut pour les sections */
-    /* Transitions pour un effet plus doux (facultatif) */
-    transition: box-shadow 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
-}
-
 /* Effets subtils pour séparer les sections */
 section + section {
     /* Ajouter une légère marge pour l'espacement */
@@ -179,8 +170,9 @@ nav ul li a:active {
     }
 
     nav ul li a {
-        padding: 10px 20px;
+        padding: 16px 20px;
         width: 100%; /* Les liens prennent toute la largeur */
+        font-size: 1.1em; /* Légèrement plus grand pour la lisibilité */
         text-align: center;
     }
 
@@ -663,81 +655,155 @@ footer {
         left: 0%;
     }
 }
-
-/* Section contact */
 #contact {
-    padding: 70px 20px; /* Ajustement du padding */
-    background-color: #121212;
-    color: #D4D4D4;
+    padding: 80px 20px;
+    background-color: #111;
+    color: #E0E0E0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteneur */
+.contact-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Titres */
+.contact-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Feedback message */
+.success-message,
+.error-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.success-message {
+    background-color: rgba(0, 128, 0, 0.1);
+    color: #28a745;
+}
+.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #dc3545;
+}
+
+/* Formulaire */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Champs */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Bouton */
+.btn-submit {
+    padding: 14px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 30px 0 10px;
+    font-weight: bold;
+    color: #888;
+    position: relative;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    height: 1px;
+    background: #444;
+    position: absolute;
+    top: 50%;
+    width: 40%;
+}
+.divider::before {
+    left: 0;
+}
+.divider::after {
+    right: 0;
+}
+
+/* Logos sociaux */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.contact-icons figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+.contact-icons img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: grayscale(50%);
+    transition: transform 0.3s, filter 0.3s;
+}
+.contact-icons img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+.contact-icons figcaption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #ccc;
     text-align: center;
 }
 
-.contact-form {
-    max-width: 550px; /* Légèrement plus petit */
-    margin: 25px auto 0; /* Ajustement de la marge */
-    text-align: left;
-    padding: 20px;
-    background-color: #1E1E1E;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Ombre plus douce */
-}
-
-.form-group {
-    margin-bottom: 18px; /* Ajustement de la marge */
-}
-
-.form-group label {
-    display: block;
-    color: #eee;
-    margin-bottom: 4px; /* Ajustement de la marge */
-    font-weight: 300;
-    font-size: 0.95em;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #252526;
-    color: #eee;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police simple pour les inputs */
-    font-size: 1em;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px; /* Légèrement plus petit */
-}
-
-.form-group .btn {
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.btn-submit {
-    width: 100%;
-    padding: 10px; /* Légèrement moins de padding */
-    background-color: #3498DB; /* Nouvelle couleur pour le bouton */
-    color: white;
-    border: none;
-    border-radius: 6px; /* Bords moins prononcés */
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 1em;
-}
-
-.btn-submit:hover {
-    background-color: #2874A6;
-}
 
 /* Pied de page */
 footer {
@@ -764,4 +830,3 @@ html {
     scroll-behavior: smooth;
 }
 /* Animation de défilement */
-

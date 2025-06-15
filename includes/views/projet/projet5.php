@@ -1,34 +1,34 @@
 <?php
 // Définir les variables pour l'en-tête
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom si différent
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description si différente
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
 // Informations spécifiques au projet Stagelys
 $nomProjet = "Stagelys";
-$imagePrincipale = "../../../public/images/stagelys.png"; // Chemin vers une image détaillée de Stagelys (À REMPLACER)
-$descriptionLongue = "Application web complète de gestion des stages conçue pour faciliter la mise en relation entre les étudiants en recherche de stage et les professeurs encadrants. Elle offre des fonctionnalités pour le dépôt d'offres, la candidature, le suivi des conventions et l'évaluation des stages. (À REMPLACER avec une description détaillée)";
+$imagePrincipale = "../../../public/images/app.png";
+$descriptionLongue = "Application web complète de gestion des stages conçue pour faciliter la mise en relation entre les étudiants en recherche de stage et les professeurs encadrants. Elle offre des fonctionnalités pour le dépôt d'offres, la candidature, le suivi des conventions et l'évaluation des stages.";
+
 $technologiesUtilisees = [
     "PHP",
     "HTML",
     "CSS",
     "JavaScript",
-    // Ajouter les frameworks/librairies utilisés (ex: Bootstrap, etc.) (À REMPLACER)
-    "Base de données (avec MySQL)", // Si une base de données est utilisée (À REMPLACER)
-    "XAMPP (pour le serveur local)", // Si tu utilises XAMPP pour le développement local (À REMPLACER)
+    "Bootstrap",
+    "MySQL",
+    "XAMPP"
 ];
+
 $fonctionnalites = [
     "Gestion des offres de stage (dépôt, modification, suppression)",
     "Profils pour étudiants et professeurs",
     "Système de candidature en ligne",
     "Suivi des conventions de stage",
     "Outils d'évaluation des stages",
-    "Interface d'administration pour la gestion des utilisateurs et des offres",
-    // Ajouter d'autres fonctionnalités (À REMPLACER)
+    "Interface d'administration pour la gestion des utilisateurs et des offres"
 ];
+
 $liensUtiles = [
-    // Si tu as un lien de démo en ligne ou un dépôt GitHub pour ce projet, ajoute-les ici
-    // "Démonstration" => "URL_DE_LA_DEMO", (À REMPLACER)
-    // "Code Source (GitHub)" => "URL_DU_REPO_GITHUB", (À REMPLACER)
+    "Code source sur GitHub" => "https://github.com/DevKosX/GestionDesStagesProject"
 ];
 ?>
 
@@ -41,16 +41,14 @@ $liensUtiles = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
-        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
-            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
-            z-index: 9998; /* Placer au-dessus du contenu principal */
+            background-color: rgba(18, 18, 18, 0.8);
+            z-index: 9998;
         }
         .retour-en-haut .btn-retour-projets {
             background-color: #007ACC;
@@ -73,7 +71,6 @@ $liensUtiles = [
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
         }
@@ -92,9 +89,9 @@ $liensUtiles = [
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
+
+    <br><br><br>
+
     <div class="retour-en-haut">
         <a href="../../../index.php#projets" class="btn-retour-projets">Retour aux Projets</a>
     </div>
@@ -107,7 +104,7 @@ $liensUtiles = [
                 <img src="<?= $imagePrincipale ?>" alt="<?= $nomProjet ?>">
             </div>
 
-            <div class="projet-description">
+            <div class="projet-description" style="text-align: justify;">
                 <h2>Description du Projet</h2>
                 <p><?= $descriptionLongue ?></p>
 
@@ -138,10 +135,10 @@ $liensUtiles = [
     </main>
 
     <?php
-    // Définir la variable pour le pied de page
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email si différent
-    include_once("../../../includes/footer.php"); // Assure-toi que le chemin vers ton footer est correct
+    $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
+    include_once("../../../includes/footer.php");
     ?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

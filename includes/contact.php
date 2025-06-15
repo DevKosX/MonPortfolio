@@ -1,35 +1,8 @@
 <?php
-$feedback = "";
-$feedbackClass = ""; // Pour styliser le message
+$feedback = $_SESSION['feedback'] ?? '';
+$feedbackClass = $_SESSION['feedbackClass'] ?? '';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["message"])) {
-    $nom     = htmlspecialchars($_POST["name"]);
-    $email   = htmlspecialchars($_POST["email"]);
-    $sujet   = "🔔 Nouveau message depuis le portfolio - $nom";
-    $message = htmlspecialchars($_POST["message"]);
-
-    $contenuMessage = "📬 Quelqu’un a essayé de vous contacter via votre portfolio.\n\n"
-        . "👤 Nom : $nom\n"
-        . "📧 Email : $email\n"
-        . "💬 Message :\n$message";
-
-    // Envoi de l'email
-    $retour = mail(
-        "mohamed-kosbar@edu.univ-paris13.fr", // Ton adresse
-        $sujet,
-        $contenuMessage,
-        "From: contact@monsite.fr\r\n" .
-        "Reply-To: $email"
-    );
-
-    if ($retour) {
-        $feedback = "Merci ! Votre message a été envoyé avec succès.";
-        $feedbackClass = "success-message"; // Classe CSS pour le succès
-    } else {
-        $feedback = "Une erreur s'est produite lors de l'envoi de votre message.";
-        $feedbackClass = "error-message"; // Classe CSS pour l'erreur
-    }
-}
+unset($_SESSION['feedback'], $_SESSION['feedbackClass']);
 ?>
 
 <section id="contact" class="contact-section">
@@ -42,72 +15,54 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["message"])) {
             </div>
         <?php endif; ?>
 
-        <form id="contactForm" method="post" action="#contact">
-            <div class="form-group mb-3">
+        <form id="contactForm" method="post" action="#contact" class="contact-form" novalidate>
+            <div class="form-group">
                 <label for="name">Votre Nom</label>
-                <input type="text" class="form-control" id="name" name="name" value="<?= isset($_POST['name']) ? htmlspecialchars($_POST['name']) : ''; ?>" required>
+                <input type="text" id="name" name="name" required placeholder="Ex: Mohamed Kosbar">
             </div>
 
-            <div class="form-group mb-3">
+            <div class="form-group">
                 <label for="email">Votre E-mail</label>
-                <input type="email" class="form-control" id="email" name="email" value="<?= isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" required>
+                <input type="email" id="email" name="email" required placeholder="Ex: mohamed@email.com">
             </div>
 
-            <div class="form-group mb-3">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required><?= isset($_POST['message']) ? htmlspecialchars($_POST['message']) : ''; ?></textarea>
+            <div class="form-group">
+                <label for="message">Votre Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Écrivez votre message ici..."></textarea>
             </div>
 
-            <button type="submit" class="form-control btn-submit">Envoyer votre Message</button>
+            <button type="submit" class="btn-submit">Envoyer le Message</button>
+
+            <div class="divider">OU</div>
+
+            <div class="contact-icons">
+                <figure>
+                    <a href="https://github.com/DevKosX" target="_blank" rel="noopener">
+                        <img src="public/images/giti.png" alt="GitHub">
+                        <figcaption>GitHub</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://www.linkedin.com/in/mohamed-kosbar-5a57972ba/" target="_blank" rel="noopener">
+                        <img src="public/images/skills/linkedin.webp" alt="LinkedIn">
+                        <figcaption>LinkedIn</figcaption>
+                    </a>
+                </figure>
+            </div>
         </form>
     </div>
 </section>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const feedbackMessage = document.getElementById('feedbackMessage');
-
-        if (feedbackMessage) {
-            setTimeout(function() {
-                feedbackMessage.style.opacity = '0';
-                setTimeout(function() {
-                    feedbackMessage.style.display = 'none';
-                }, 500); // Délai pour la transition de l'opacité
-            }, 5000); // Disparaître après 5 secondes (5000 millisecondes)
-        }
-
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(event) {
-                // La redirection vers #contact est déjà gérée par l'attribut action du formulaire
-                // Nous allons simuler un "focus" sur la section contact pour un meilleur effet visuel
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        }
-    });
+document.addEventListener('DOMContentLoaded', function () {
+    const feedbackMessage = document.getElementById('feedbackMessage');
+    if (feedbackMessage) {
+        setTimeout(() => {
+            feedbackMessage.style.opacity = '0';
+            setTimeout(() => {
+                feedbackMessage.style.display = 'none';
+            }, 500);
+        }, 5000);
+    }
+});
 </script>
-
-<style>
-    .success-message {
-        color: lightgreen;
-        background-color: rgba(144, 238, 144, 0.1); /* Vert clair transparent */
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .error-message {
-        color: red;
-        background-color: rgba(255, 0, 0, 0.1); /* Rouge clair transparent */
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-    }
-</style>

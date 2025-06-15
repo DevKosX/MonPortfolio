@@ -72,6 +72,12 @@
             </figure>
             <figure>
                 <a>
+                    <img src="public/images/skills/intellij.png" alt="Logo Intellij" height="100px">
+                    <figcaption>Intellig</figcaption>
+                </a>
+            </figure>
+            <figure>
+                <a>
                     <img src="public/images/skills/laravel.png" alt="Logo Laravel" height="100px">
                     <figcaption>Laravel</figcaption>
                 </a>

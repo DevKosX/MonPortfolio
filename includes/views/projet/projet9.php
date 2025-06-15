@@ -1,31 +1,30 @@
 <?php
 // Définir les variables pour l'en-tête
-$owner_name = "Mohamed Kosbar";
-$owner_description = "Développeur Web Passionné";
+$owner_name = "Mohamed Kosbar"; // Remplace par ton nom si différent
+$owner_description = "Développeur Web Passionné"; // Remplace par ta description si différente
 
-// Informations spécifiques au projet France Academy
-$nomProjet = "France Academy";
-$imagePrincipale = "../../../public/images/fa.png";
-$descriptionLongue = "Plateforme web complète de gestion des formations et des utilisateurs, développée pour un organisme de formation fictif. Elle permet de gérer le catalogue des formations, les inscriptions des utilisateurs, les sessions de formation, et potentiellement les formateurs et les évaluations.";
+// Informations spécifiques au projet Observatoire de Juvisy
+$nomProjet = "Observatoire de Juvisy";
+$imagePrincipale = "../../../public/images/observatoire_detail.jpg"; // Chemin vers une image détaillée de l'observatoire (À REMPLACER)
+$descriptionLongue = "Projet de recueil des besoins mené pour l'Observatoire de Juvisy. Ce projet visait à identifier et documenter les besoins spécifiques de l'observatoire en termes de systèmes informatiques, de gestion des données astronomiques, de communication avec le public, et d'outils de recherche. (À REMPLACER avec une description détaillée du projet et de ta contribution)";
 $technologiesUtilisees = [
-    "PHP",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Laravel (framework PHP)",
-    "Bootstrap (pour le design)",
-    "Base de données (PostgreSQL)",
+    "Méthodologies de recueil des besoins (entretiens, questionnaires, etc.)",
+    "Outils de documentation et de reporting",
+    // Ajouter d'autres outils ou compétences spécifiques utilisées (À REMPLACER)
 ];
 $fonctionnalites = [
-    "Gestion du catalogue des formations (création, lecture, mise à jour, suppression)",
-    "Inscription et gestion des profils utilisateurs",
-    "Planification et gestion des sessions de formation",
-    "Gestion des formateurs (si applicable)",
-    "Système d'authentification et d'autorisation",
-    "Interface d'administration pour la gestion globale de la plateforme",
+    "Identification des parties prenantes et de leurs besoins",
+    "Conduite d'entretiens et d'ateliers de travail",
+    "Élaboration de questionnaires pour la collecte d'informations",
+    "Analyse et synthèse des besoins recueillis",
+    "Rédaction de rapports et de spécifications fonctionnelles",
+    "Présentation des résultats et des recommandations",
+    // Ajouter d'autres aspects ou livrables du projet (À REMPLACER)
 ];
 $liensUtiles = [
-    "Code Source (GitHub)" => "https://github.com/DevKosX/FranceAcademy",
+    // Si tu as des documents publics ou un lien vers le site de l'observatoire, ajoute-les ici
+    // "Site de l'Observatoire de Juvisy" => "URL_DE_L_OBSERVATOIRE", (À REMPLACER)
+    // "Rapport de Recueil des Besoins (si public)" => "URL_DU_RAPPORT", (À REMPLACER)
 ];
 ?>
 
@@ -38,14 +37,16 @@ $liensUtiles = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
+        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
+            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8);
-            z-index: 9998;
+            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
+            z-index: 9998; /* Placer au-dessus du contenu principal */
         }
         .retour-en-haut .btn-retour-projets {
             background-color: #007ACC;
@@ -67,6 +68,8 @@ $liensUtiles = [
             background-color: #005EA3;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
+
+        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
         }
@@ -85,7 +88,9 @@ $liensUtiles = [
             </ul>
         </div>
     </nav>
-    <br><br><br>
+    <br>
+    <br>
+    <br>
     <div class="retour-en-haut">
         <a href="../../../index.php#projets" class="btn-retour-projets">Retour aux Projets</a>
     </div>
@@ -98,7 +103,7 @@ $liensUtiles = [
                 <img src="<?= $imagePrincipale ?>" alt="<?= $nomProjet ?>">
             </div>
 
-            <div class="projet-description" style="text-align: justify;">
+            <div class="projet-description">
                 <h2>Description du Projet</h2>
                 <p><?= $descriptionLongue ?></p>
 
@@ -129,10 +134,10 @@ $liensUtiles = [
     </main>
 
     <?php
-    $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
-    include_once("../../../includes/footer.php");
+    // Définir la variable pour le pied de page
+     // Remplace par ton email si différent
+    include_once("../../../includes/footer.php"); // Assure-toi que le chemin vers ton footer est correct
     ?>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

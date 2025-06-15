@@ -1,11 +1,11 @@
 <?php
-// Définir les variables pour l'en-tête (même si non inclus)
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description
+// Définir les variables pour l'en-tête
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
-// Récupérer le nom du projet (pour le titre de la page et potentiellement d'autres infos)
-$nomProjet = "Calculatrice en Java"; // À adapter dynamiquement si nécessaire
-$imagePrincipale = "../../../public/images/projet1.jpg"; // Image plus détaillée du projet
+// Informations spécifiques au projet Calculatrice Java
+$nomProjet = "Calculatrice en Java";
+$imagePrincipale = "../../../public/images/javac.png";
 $descriptionLongue = "Cette calculatrice développée en Java offre une interface utilisateur graphique intuitive (GUI) réalisée avec Swing. Elle permet d'effectuer les quatre opérations arithmétiques de base (addition, soustraction, multiplication, division), ainsi que la gestion des parenthèses pour des calculs plus complexes. Le programme implémente également une gestion des erreurs, notamment pour la division par zéro, afin d'assurer une expérience utilisateur robuste.";
 $technologiesUtilisees = [
     "Java",
@@ -22,8 +22,7 @@ $fonctionnalites = [
     "Design simple et facile à utiliser",
 ];
 $liensUtiles = [
-    "Code Source (GitHub)" => "https://github.com/tonpseudo/calculatrice-java", // Remplace par ton lien GitHub
-    "Démonstration (si applicable)" => "https://tonsite.com/calculatrice-java-demo", // Remplace par un lien de démo si tu en as un
+    "Code Source (GitHub)" => "https://github.com/DevKosX/CalculatriceJava",
 ];
 ?>
 
@@ -36,16 +35,14 @@ $liensUtiles = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
-        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
-            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
-            z-index: 9998; /* Placer au-dessus du contenu principal */
+            background-color: rgba(18, 18, 18, 0.8);
+            z-index: 9998;
         }
         .retour-en-haut .btn-retour-projets {
             background-color: #007ACC;
@@ -56,7 +53,6 @@ $liensUtiles = [
             cursor: pointer;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             display: inline-block;
-            margin-top: 0;
             font-family: 'Exo 2', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -67,10 +63,11 @@ $liensUtiles = [
             background-color: #005EA3;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
-
-        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
+        }
+        .projet-description {
+            text-align: justify;
         }
     </style>
 </head>
@@ -80,7 +77,6 @@ $liensUtiles = [
             <ul>
                 <li><a href="../../../index.php#accueil">Accueil</a></li>
                 <li><a href="../../../index.php#apropos">Qui suis-je ?</a></li>
-
                 <li><a href="../../../index.php#competences">Compétences</a></li>
                 <li><a href="../../../index.php#projets" class="active">Projets</a></li>
                 <li><a href="../../../index.php#experience">Expériences</a></li>
@@ -88,9 +84,8 @@ $liensUtiles = [
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
+
     <div class="retour-en-haut">
         <a href="../../../index.php#projets" class="btn-retour-projets">Retour aux Projets</a>
     </div>
@@ -134,9 +129,7 @@ $liensUtiles = [
     </main>
 
     <?php
-    // Définir la variable pour le pied de page (même si footer non inclus)
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email
-    // Ne pas inclure le footer
+    $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
     include_once("../../../includes/footer.php");
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

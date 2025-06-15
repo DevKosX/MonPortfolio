@@ -1,6 +1,6 @@
 <footer>
   <div class="container">
-    <p><?php echo $owner_email; ?></p>
+    <p><?php echo $droits_reserves; ?></p>
   </div>
 </footer>
 

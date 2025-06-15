@@ -1,30 +1,24 @@
 <?php
 // Définir les variables pour l'en-tête
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom si différent
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description si différente
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
 // Informations spécifiques au projet Santa Claus Python
 $nomProjet = "Santa Claus Python";
-$imagePrincipale = "../../../public/images/py_detail.png"; // Chemin vers une image détaillée du projet Python (À REMPLACER)
-$descriptionLongue = "Un projet développé en Python qui explore des concepts de logique et d'algorithmes à travers une interface en console. Ce projet pourrait impliquer la résolution de puzzles, la simulation de scénarios ou l'application de structures de données de manière créative. (À REMPLACER avec une description détaillée du projet)";
+$imagePrincipale = "../../../public/images/py.png";
+$descriptionLongue = "Un projet développé en Python qui explore des concepts de logique et d'algorithmes à travers une interface en console. Ce projet pourrait impliquer la résolution de puzzles, la simulation de scénarios ou l'application de structures de données de manière créative.";
 $technologiesUtilisees = [
     "Python",
     "Algorithmes",
     "Logique de programmation",
     "Interface en console",
-    // Ajouter d'autres librairies Python spécifiques si utilisées (À REMPLACER)
 ];
 $fonctionnalites = [
-    "Implémentation d'algorithmes spécifiques (à préciser)",
+    "Implémentation d'algorithmes spécifiques",
     "Interaction utilisateur via l'interface en console",
     "Gestion de données (si applicable)",
     "Résolution de problèmes logiques",
     "Structure de code claire et modulaire en Python",
-    // Ajouter d'autres fonctionnalités ou aspects du projet (À REMPLACER)
-];
-$liensUtiles = [
-    // Si tu as un dépôt GitHub pour ce projet, ajoute-le ici
-    "Code Source (GitHub)" => "URL_DU_REPO_PYTHON", // (À REMPLACER)
 ];
 ?>
 
@@ -37,16 +31,14 @@ $liensUtiles = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
-        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
-            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
-            z-index: 9998; /* Placer au-dessus du contenu principal */
+            background-color: rgba(18, 18, 18, 0.8);
+            z-index: 9998;
         }
         .retour-en-haut .btn-retour-projets {
             background-color: #007ACC;
@@ -68,8 +60,6 @@ $liensUtiles = [
             background-color: #005EA3;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
-
-        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
         }
@@ -88,9 +78,8 @@ $liensUtiles = [
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
+
     <div class="retour-en-haut">
         <a href="../../../index.php#projets" class="btn-retour-projets">Retour aux Projets</a>
     </div>
@@ -103,7 +92,7 @@ $liensUtiles = [
                 <img src="<?= $imagePrincipale ?>" alt="<?= $nomProjet ?>">
             </div>
 
-            <div class="projet-description">
+            <div class="projet-description" style="text-align: justify;">
                 <h2>Description du Projet</h2>
                 <p><?= $descriptionLongue ?></p>
 
@@ -120,23 +109,13 @@ $liensUtiles = [
                         <li><?= $fonctionnalite ?></li>
                     <?php endforeach; ?>
                 </ul>
-
-                <?php if (!empty($liensUtiles)) : ?>
-                    <h3>Liens Utiles</h3>
-                    <ul>
-                        <?php foreach ($liensUtiles as $label => $lien) : ?>
-                            <li><a href="<?= $lien ?>" target="_blank" rel="noopener noreferrer"><?= $label ?></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
             </div>
         </div>
     </main>
 
     <?php
-    // Définir la variable pour le pied de page
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email si différent
-    include_once("../../../includes/footer.php"); // Assure-toi que le chemin vers ton footer est correct
+    $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
+    include_once("../../../includes/footer.php");
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

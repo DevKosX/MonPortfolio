@@ -1,8 +1,3 @@
-<?php
-// includes/cv_modal_section.php
-
-?>
-
 <section id="apropos">
     <h2 class="section-title">À Propos de Moi</h2>
     <div class="apropos-content">
@@ -12,35 +7,18 @@
             </p>
         </div>
         <div class="cv">
-            <img src="MonPorfolio/public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.jpg" alt="Prévisualisation du CV" class="cv-preview" onclick="openCvModal();">
-            <a href="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.pdf" class="btn download" download="CV_2024-12-21_Mohamed_Kosbar_page-0001.pdf" title="Téléchargez mon CV au format PDF">
+            <!-- Aperçu image cliquable du CV (ouvre le PDF dans un nouvel onglet) -->
+            <a href="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.pdf" target="_blank" title="Voir le CV en PDF">
+                <img src="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.jpg" alt="Prévisualisation du CV" class="cv-preview">
+            </a>
+
+            <!-- Lien de téléchargement du PDF -->
+            <a href="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.pdf"
+               class="btn download"
+               download="CV_2024-12-21_Mohamed_Kosbar.pdf"
+               title="Téléchargez mon CV au format PDF">
                 Télécharger mon CV
             </a>
         </div>
     </div>
 </section>
-
-<div id="cvModal" class="modal" onclick="closeCvModal(event)">
-    <span class="close" onclick="closeCvModal(event)">&times;</span>
-    <img class="modal-content" src="public/images/CV_2024-12-21_Mohamed_Kosbar_page-0001.jpg" id="cvImage">
-</div>
-
-<script>
-    function openCvModal() {
-        document.getElementById("cvModal").style.display = "block";
-        const mainNav = document.getElementById("mainNav");
-        if (mainNav) {
-            mainNav.style.display = "none"; // Masquer la navigation
-        }
-    }
-
-    function closeCvModal(event) {
-        if (event.target == document.getElementById("cvModal") || event.target.className == "close") {
-            document.getElementById("cvModal").style.display = "none";
-            const mainNav = document.getElementById("mainNav");
-            if (mainNav) {
-                mainNav.style.display = "block"; // Afficher la navigation
-            }
-        }
-    }
-</script>
