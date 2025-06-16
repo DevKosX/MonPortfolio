@@ -24,27 +24,18 @@
                 </div>
             </div>
 
-            <div class="projet">
-                <img src="public/images/ojs.jpg" alt="Observatoire de Juvisy">
+                        <div class="projet">
+                <img src="public/images/wdj.jpg" alt="Nom de l'autre projet">
                 <div class="projet-info">
-                    <h3>Recueil de Besoin</h3>
-                    <p class="short-desc">Projet de recueil des besoins pour un observatoire astronomique local.</p>
-                    <a href="includes/views/projet/projet6.php" class="details-link" title="En savoir plus sur le recueil de besoin">
+                    <h3>World Cup Strike 2025</h3>
+                    <p class="short-desc">Un jeu complet de tirs aux buts concu en Java toujours en phase de test et non déployé. </p>
+                    <a href="includes/views/projet/projet9.php" class="details-link" title="En savoir plus sur l'autre projet">
                         Voir plus &rarr;
                     </a>
                 </div>
             </div>
 
-            <div class="projet">
-                <img src="public/images/py.png" alt="Projet Python">
-                <div class="projet-info">
-                    <h3>Santa Claus Python</h3>
-                    <p class="short-desc">Un projet en Python mêlant logique, algorithmes et interface console.</p>
-                    <a href="includes/views/projet/projet7.php" class="details-link" title="En savoir plus sur le projet Python">
-                        Voir plus &rarr;
-                    </a>
-                </div>
-            </div>
+
 
             <div class="projet">
                 <img src="public/images/javac.png" alt="Calculatrice en Java">
@@ -68,12 +59,12 @@
                 </div>
             </div>
 
-            <div class="projet">
-                <img src="public/images/sql.jpg" alt="Nom de l'autre projet">
+                        <div class="projet">
+                <img src="public/images/ojs.jpg" alt="Observatoire de Juvisy">
                 <div class="projet-info">
-                    <h3>Base de données</h3>
-                    <p class="short-desc">Rapport structuré d'une base de données avec rédaction du script</p>
-                    <a href="includes/views/projet/projet7.php" class="details-link" title="En savoir plus sur l'autre projet">
+                    <h3>Recueil de Besoin</h3>
+                    <p class="short-desc">Projet de recueil des besoins pour un observatoire astronomique local.</p>
+                    <a href="includes/views/projet/projet6.php" class="details-link" title="En savoir plus sur le recueil de besoin">
                         Voir plus &rarr;
                     </a>
                 </div>
@@ -83,7 +74,7 @@
                 <img src="public/images/boot.jpg" alt="Nom de l'autre projet">
                 <div class="projet-info">
                     <h3>Bootage Disque Dur </h3>
-                    <p class="short-desc">Rapport structuré d'une base de données avec rédaction du script</p>
+                    <p class="short-desc">Long projet avec un Raspberry PI en tant que disque dur externe, bootage, droit d'ecriture.</p>
                     <a href="includes/views/projet/projet8.php" class="details-link" title="En savoir plus sur l'autre projet">
                         Voir plus &rarr;
                     </a>
@@ -91,11 +82,22 @@
             </div>
 
             <div class="projet">
-                <img src="public/images/iut24.jpg" alt="Nom de l'autre projet">
+                <img src="public/images/bd.jpg" alt="Nom de l'autre projet">
                 <div class="projet-info">
                     <h3>Base de données</h3>
-                    <p class="short-desc">Rapport structuré d'une base de données avec rédaction du script</p>
-                    <a href="includes/views/projet/projet9.php" class="details-link" title="En savoir plus sur l'autre projet">
+                    <p class="short-desc">Projet sur une base de données : Freedom en Postgres SQL avec des modèles Merise.</p>
+                    <a href="includes/views/projet/projet3.php" class="details-link" title="En savoir plus sur l'autre projet">
+                        Voir plus &rarr;
+                    </a>
+                </div>
+            </div>
+
+                        <div class="projet">
+                <img src="public/images/papnoel.jpg" alt="Projet Python">
+                <div class="projet-info">
+                    <h3>Santa Claus Python</h3>
+                    <p class="short-desc">Un projet en Python mêlant logique, algorithmes pour calculer les courses du Père Noel en France.</p>
+                    <a href="includes/views/projet/projet7.php" class="details-link" title="En savoir plus sur le projet Python">
                         Voir plus &rarr;
                     </a>
                 </div>

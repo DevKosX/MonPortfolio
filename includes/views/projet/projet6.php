@@ -24,8 +24,7 @@ $fonctionnalites = [
 ];
 
 $liensUtiles = [
-    "Code source sur GitHub" => "https://github.com/DevKosX/ObservatoireDeJuvisy",
-    "Site de l'Observatoire de Juvisy" => "https://www.observatoire-juvisy.fr/"
+    "Code source sur GitHub" => "https://github.com/DevKosX/ObservatoireDeJuvisy"
 ];
 ?>
 

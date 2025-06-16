@@ -70,7 +70,7 @@
     <!-- Nouvelle section avec vidéo en fond -->
     <section id="accueil">
         <video autoplay loop muted playsinline>
-            <source src="public/images/videoi.mp4" type="video/mp4">
+            <source src="public/images/video.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos HTML5.
         </video>
         <div class="container">

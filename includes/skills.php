@@ -76,6 +76,12 @@
                     <figcaption>Intellig</figcaption>
                 </a>
             </figure>
+                        <figure>
+                <a>
+                    <img src="public/images/giti.png" alt="Logo XAMPP" height="100px">
+                    <figcaption>Git Hub</figcaption>
+                </a>
+            </figure>
             <figure>
                 <a>
                     <img src="public/images/skills/laravel.png" alt="Logo Laravel" height="100px">

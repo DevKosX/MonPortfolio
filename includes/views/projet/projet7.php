@@ -5,7 +5,7 @@ $owner_description = "Développeur Web Passionné";
 
 // Informations spécifiques au projet Santa Claus Python
 $nomProjet = "Santa Claus Python";
-$imagePrincipale = "../../../public/images/py.png";
+$imagePrincipale = "../../../public/images/papnoel.jpg";
 $descriptionLongue = "Un projet développé en Python qui explore des concepts de logique et d'algorithmes à travers une interface en console. Ce projet pourrait impliquer la résolution de puzzles, la simulation de scénarios ou l'application de structures de données de manière créative.";
 $technologiesUtilisees = [
     "Python",

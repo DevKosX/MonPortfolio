@@ -3,8 +3,9 @@
     <div class="apropos-content">
         <div class="text">
             <p>
-                En tant que développeur web passionné, j'ai acquis une expertise solide en HTML5, CSS3 et JavaScript, avec une maîtrise des frameworks React et Node.js. J'utilise Git quotidiennement pour la gestion de versions et suis familier avec les méthodes agiles. Mon expérience couvre le développement frontend responsive et l'optimisation des performances backend. J'ai implémenté plusieurs API RESTful et travaillé avec diverses bases de données SQL et NoSQL. Amateur de football, j'apporte à mes projets la même discipline et esprit d'équipe que sur le terrain. Je recherche des défis techniques stimulants où je pourrai appliquer mes compétences en intégration continue, tests automatisés et déploiement cloud.
+                Développeur web basé en France, je suis passionné par la création d’expériences numériques modernes, performantes et bien pensées. Avec une solide maîtrise de HTML5, CSS3 et JavaScript, j’ai également développé des compétences avancées sur les frameworks React et Node.js. Je travaille au quotidien avec Git, dans un esprit agile, et j’accorde une grande importance à l’optimisation du code, aussi bien côté frontend que backend. J’ai eu l’occasion de concevoir et d’intégrer plusieurs API RESTful, en manipulant aussi bien des bases de données SQL. je suis toujours à la recherche active de nouveaux défis techniques, je m’intéresse aussi à l’intégration, aux tests automatisés avec Dev Ops et aux déploiements cloud avec AWS. En dehors du code, je suis un grand passionné de football, un sport qui m’a appris la rigueur, le travail d’équipe et la persévérance, des valeurs que je retrouve dans chaque projet tech, universitaires et dans la vie de tout les jours.
             </p>
+
         </div>
         <div class="cv">
             <!-- Aperçu image cliquable du CV (ouvre le PDF dans un nouvel onglet) -->

@@ -2,29 +2,30 @@
 $owner_name = "Mohamed Kosbar";
 $owner_description = "Développeur Web Passionné";
 
-$nomExperience = "Stage chez OFW Ships";
-$imagePrincipale = "../../../public/images/ofw_detail.jpg";
+$nomExperience = "Stage chez OFW Ships - Expérience Inoubliable";
+$imagePrincipale = "../../../public/images/ofw.jpg"; // adapte ce chemin si besoin
 
-$descriptionLongue = "Ce stage de 8 semaines, effectué au sein de la société Devea pour le client OFW Ships, m'a permis de travailler dans un environnement professionnel sur des projets concrets de développement web. J'ai participé à la conception, au développement et à l'intégration de nouvelles fonctionnalités pour la plateforme de gestion des navires. Cette expérience m'a permis de renforcer mes compétences techniques, ma capacité à collaborer au sein d'une équipe, et ma compréhension du cycle complet de développement.";
+$descriptionLongue = "En décembre 2019, j'ai eu l'opportunité de vivre une expérience humaine et professionnelle inoubliable grâce à un stage au sein de l'entreprise OFW Ships, spécialisée dans la pêche en eaux salées. La première semaine s'est déroulée dans les bureaux de l'entreprise, où j’ai pu découvrir l’organisation d’une société maritime. La seconde semaine, j’ai embarqué avec l’équipe sur un navire de pêche en Norvège. Cette immersion m’a permis d’apprendre énormément sur le travail d’équipe, l’adaptabilité et le fonctionnement concret de l’industrie maritime.";
 
-$entreprise = "Devea (pour le client OFW Ships)";
-$duree = "8 semaines";
-$periodes = "Avril 2024 - Juin 2024";
+$entreprise = "OFW Ships (entreprise de pêche maritime)";
+$duree = "2 semaines";
+$periodes = "Décembre 2019";
 
 $competencesAcquises = [
-    "Développement Web (HTML, CSS, JavaScript, PHP)",
-    "Utilisation de frameworks PHP modernes",
-    "Travail en équipe agile",
-    "Gestion de versions avec Git",
-    "Communication professionnelle en entreprise",
+    "Découverte du monde professionnel en entreprise",
+    "Immersion dans le secteur maritime (organisation, logistique)",
+    "Travail en équipe dans un environnement exigeant",
+    "Capacité d’adaptation en contexte international",
+    "Communication en conditions réelles (terrain et mer)",
 ];
 
 $realisations = [
-    "Développement d’un module de suivi de maintenance des navires",
-    "Implémentation d’un tableau de bord interactif avec graphiques dynamiques",
-    "Optimisation de requêtes SQL pour accélérer les temps de réponse",
+    "Observation des opérations administratives et logistiques de l'entreprise",
+    "Participation à la vie à bord d’un navire en Norvège",
+    "Compréhension globale du métier de marin et des enjeux de la pêche",
 ];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">

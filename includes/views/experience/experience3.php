@@ -1,30 +1,35 @@
 <?php
 // Définir les variables pour l'en-tête
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom si différent
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description si différente
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
 // Informations spécifiques à l'expérience chez Devea
-$nomExperience = "Stage chez Devea";
-$imagePrincipale = "../../../public/images/DEVEA_detail.jpg"; // Chemin vers une image détaillée du stage (À REMPLACER)
-$descriptionLongue = "Stage de 8 semaines en développement web effectué au sein de l’entreprise Devea. Durant ce stage, j'ai été intégré à l'équipe de développement et j'ai participé à [Décris tes tâches principales et les projets sur lesquels tu as travaillé]. J'ai pu mettre en pratique mes compétences en [Liste les compétences que tu as utilisées et développées]. (À REMPLACER avec une description détaillée de ton stage)";
+$nomExperience = "Stage chez Devea - Développement Full-Stack PHP";
+$imagePrincipale = "../../../public/images/DEVEA.jpg";
+
+$descriptionLongue = "J'ai effectué un stage intensif au sein de l'entreprise Devea, durant lequel j'ai été intégré à l'équipe de développement en tant que développeur PHP. Ce stage a été une véritable immersion dans un environnement professionnel, centré sur le développement d’un ERP interne et la participation au projet France Academy. J'ai travaillé principalement avec le framework Laravel (PHP) sur des modules métiers, en lien avec la gestion des utilisateurs, des formations, et des tableaux de bord. Cette expérience m’a permis de renforcer mes compétences back-end, de comprendre l’architecture d’une application d'entreprise, et de collaborer efficacement dans une équipe agile.";
+
 $entreprise = "Devea SAS";
 $duree = "8 semaines";
-$periodes = "Date de début - Date de fin"; // Remplace par les dates réelles
+$periodes = "24 janvier 2025 - 24 mars 2025";
+
 $competencesAcquises = [
-    "Développement Web (HTML, CSS, JavaScript, PHP, etc.)", // Liste les compétences techniques
-    "Travail en équipe",
-    "Gestion de projet",
-    "Communication professionnelle",
-    "Adaptabilité",
-    // Ajouter d'autres compétences acquises (À REMPLACER)
+    "Développement Back-End avec Laravel (PHP)",
+    "Manipulation de bases de données MySQL",
+    "Utilisation d’un ERP sur mesure",
+    "Respect des standards de développement (MVC, REST)",
+    "Travail en équipe agile (méthodologie SCRUM)",
+    "Utilisation de Git (versioning et collaboration)",
 ];
+
 $realisations = [
-    "Participation au développement de [Nom du projet ou de la fonctionnalité]", // Décris tes réalisations concrètes
-    "Mise en place de [Description d'une tâche spécifique]",
-    "Contribution à l'amélioration de [Aspect spécifique]",
-    // Ajouter d'autres réalisations (À REMPLACER)
+    "Participation au développement de l’ERP interne (modules utilisateurs, gestion des droits, etc.)",
+    "Implémentation de fonctionnalités pour le projet France Academy",
+    "Écriture de requêtes optimisées et mise en place de contrôleurs Laravel",
+    "Tests fonctionnels et corrections de bugs sur plusieurs modules métiers",
 ];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -101,7 +106,7 @@ $realisations = [
                 <img src="<?= $imagePrincipale ?>" alt="<?= $nomExperience ?>">
             </div>
 
-            <div class="projet-description">
+            <div class="projet-description" style="text-align: justify;">
                 <h2>Description du Stage</h2>
                 <p><?= $descriptionLongue ?></p>
 
@@ -128,10 +133,10 @@ $realisations = [
         </div>
     </main>
 
+
     <?php
-    // Définir la variable pour le pied de page
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email si différent
-    include_once("../../../includes/footer.php"); // Assure-toi que le chemin vers ton footer est correct
+    $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
+    include_once("../../../includes/footer.php");
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

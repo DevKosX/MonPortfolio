@@ -128,14 +128,6 @@ $liensUtiles = [
                     <?php endforeach; ?>
                 </ul>
 
-                <?php if (!empty($liensUtiles)) : ?>
-                    <h3>Liens Utiles</h3>
-                    <ul>
-                        <?php foreach ($liensUtiles as $label => $lien) : ?>
-                            <li><a href="<?= $lien ?>" target="_blank" rel="noopener noreferrer"><?= $label ?></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
             </div>
         </div>
     </main>
@@ -144,6 +136,7 @@ $liensUtiles = [
     $droits_reserves = "Tous droits réservés © 2025 Mohamed Kosbar";
     include_once("../../../includes/footer.php");
     ?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

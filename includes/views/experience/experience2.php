@@ -1,30 +1,33 @@
 <?php
-// Définir les variables pour l'en-tête
-$owner_name = "Mohamed Kosbar"; // Remplace par ton nom si différent
-$owner_description = "Développeur Web Passionné"; // Remplace par ta description si différente
+$owner_name = "Mohamed Kosbar";
+$owner_description = "Développeur Web Passionné";
 
-// Informations spécifiques au bénévolat 24H de l'Info
-$nomExperience = "Bénévolat 24H de l'Info";
-$imagePrincipale = "../../../public/images/24Info_detail.png"; // Chemin vers une image détaillée du bénévolat (À REMPLACER)
-$descriptionLongue = "Bénévolat volontaire pour environ un mois de préparation et la participation à l'événement '24H de l'Info' organisé par l'IUT [Nom de l'IUT]. Durant cette expérience, j'ai contribué à [Décris tes tâches principales : organisation, logistique, technique, communication, etc.]. J'ai notamment [Mentionne une ou deux actions spécifiques importantes]. (À REMPLACER avec une description détaillée de ton bénévolat)";
-$organisation = "IUT [Nom de l'IUT]"; // Remplace par le nom de ton IUT
-$dureePreparation = "Environ 1 mois";
-$evenement = "24H de l'Info";
-$periodes = "Date de début de la préparation - Date de l'événement"; // Remplace par les dates réelles
-$competencesDeveloppees = [
-    "Organisation d'événements",
-    "Travail en équipe",
-    "Communication",
-    "Gestion du temps",
-    "Adaptabilité face aux imprévus",
-    // Ajouter d'autres compétences développées (À REMPLACER)
+$nomExperience = "Bénévolat - Organisation des 24H de l'Info";
+$imagePrincipale = "../../../public/images/24Info.png"; 
+
+$descriptionLongue = "Entre mai et juin 2025, j’ai participé activement à l'organisation complète de l’événement \"24H de l'Info\" à l'IUT de Villetaneuse. Ce projet bénévole m’a permis d’être pleinement impliqué dans toutes les étapes clés de la préparation : planification logistique, coordination des équipes, gestion du matériel informatique, et accueil des participants le jour J. J’ai notamment assuré la mise en place des espaces de travail, la communication avec les intervenants et l'encadrement des équipes tout au long de l’événement. Cette expérience m’a permis de développer des compétences essentielles en organisation, en communication, et en gestion d’événement dans un contexte réel et dynamique.";
+
+$entreprise = "IUT de Villetaneuse";
+$duree = "1 mois";
+$periodes = "Mai - Juin 2025";
+
+$competencesAcquises = [
+    "Organisation d'événement",
+    "Communication et relation client",
+    "Gestion du temps et des imprévus",
+    "Travail d’équipe",
+    "Réactivité et autonomie",
 ];
-$contributions = [
-    "Participation à [Tâche d'organisation spécifique]",
-    "Aide à la logistique de [Aspect logistique spécifique]",
-    "Contribution à [Aspect de communication ou technique]",
-    // Ajouter d'autres contributions spécifiques (À REMPLACER)
+
+$realisations = [
+    "Organisation complète des 24H de l’Info à l’IUT de Villetaneuse",
+    "Accueil et orientation des participants et intervenants",
+    "Préparation logistique des salles et des postes informatiques",
+    "Coordination avec les équipes techniques et pédagogiques",
+    "Création d’un site pour recueillir les avis des participants",
 ];
+
+$lienAvis = "https://akd9380devlg.wixsite.com/24h-de-l";
 ?>
 
 <!DOCTYPE html>
@@ -36,17 +39,16 @@ $contributions = [
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/projet_detail.css">
     <style>
-        /* Styles du bouton retour en haut */
         .retour-en-haut {
             text-align: center;
             padding: 20px 0;
-            /* position: fixed; /* Enlever la position fixed */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(18, 18, 18, 0.8); /* Fond légèrement transparent pour le bouton */
-            z-index: 9998; /* Placer au-dessus du contenu principal */
+            background-color: rgba(18, 18, 18, 0.8);
+            z-index: 9998;
         }
+
         .retour-en-haut .btn-retour-experiences {
             background-color: #007ACC;
             color: #fff;
@@ -55,22 +57,38 @@ $contributions = [
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            display: inline-block;
-            margin-top: 0;
             font-family: 'Exo 2', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
             text-decoration: none;
         }
+
         .retour-en-haut .btn-retour-experiences:hover {
             background-color: #005EA3;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Ajustement du main pour ne pas avoir de padding-top supplémentaire */
         main.container.detail-projet {
             padding-top: 0;
+        }
+
+        .projet-description {
+            text-align: justify;
+        }
+
+        .lien-utile {
+            margin-top: 30px;
+        }
+
+        .lien-utile a {
+            color: #007ACC;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .lien-utile a:hover {
+            color: #005EA3;
         }
     </style>
 </head>
@@ -87,9 +105,8 @@ $contributions = [
             </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
+
     <div class="retour-en-haut">
         <a href="../../../index.php#experience" class="btn-retour-experiences">Retour aux Expériences</a>
     </div>
@@ -106,40 +123,40 @@ $contributions = [
                 <h2>Description du Bénévolat</h2>
                 <p><?= $descriptionLongue ?></p>
 
-                <h3>Organisation</h3>
-                <p><?= $organisation ?></p>
+                <h3>Organisé par</h3>
+                <p><?= $entreprise ?></p>
 
-                <h3>Durée de Préparation</h3>
-                <p><?= $dureePreparation ?></p>
+                <h3>Durée</h3>
+                <p><?= $duree ?> (<?= $periodes ?>)</p>
 
-                <h3>Événement</h3>
-                <p><?= $evenement ?></p>
-
-                <h3>Période</h3>
-                <p><?= $periodes ?></p>
-
-                <h3>Compétences Développées</h3>
+                <h3>Compétences Acquises</h3>
                 <ul>
-                    <?php foreach ($competencesDeveloppees as $competence) : ?>
+                    <?php foreach ($competencesAcquises as $competence) : ?>
                         <li><?= $competence ?></li>
                     <?php endforeach; ?>
                 </ul>
 
-                <h3>Contributions</h3>
+                <h3>Réalisations</h3>
                 <ul>
-                    <?php foreach ($contributions as $contribution) : ?>
-                        <li><?= $contribution ?></li>
+                    <?php foreach ($realisations as $realisation) : ?>
+                        <li><?= $realisation ?></li>
                     <?php endforeach; ?>
                 </ul>
+
+                <div class="lien-utile">
+                    <h3>Liens utiles</h3>
+                    <p>💬 Consultez le site des 24H de l’Info avec les retours des participants :  
+                        <a href="<?= $lienAvis ?>" target="_blank"><?= $lienAvis ?></a>
+                    </p>
+                </div>
             </div>
         </div>
     </main>
 
-    <?php
-    // Définir la variable pour le pied de page
-    $owner_email = "mohamed.kosbar@example.com"; // Remplace par ton email si différent
-    include_once("../../../includes/footer.php"); // Assure-toi que le chemin vers ton footer est correct
-    ?>
+    <footer style="text-align:center; padding:20px; font-size:0.9em; color:#aaa;">
+        Tous droits réservés © 2025 Mohamed Kosbar
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
